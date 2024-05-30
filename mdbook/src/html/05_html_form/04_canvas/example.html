@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="myCanvas1" width="400" height="400" style="border:1px solid #000000;">
+      Tarayıcınız HTML canvas etiketini desteklemiyor.
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas1");
+      var ctx = canvas.getContext("2d");
+
+      // Dolgu ile dikdörtgen çiz
+      ctx.fillStyle = "#FF0000"; // Kırmızı renk
+      ctx.fillRect(20, 20, 150, 100);
+
+      // Çerçeve ile dikdörtgen çiz
+      ctx.strokeStyle = "#0000FF"; // Mavi renk
+      ctx.strokeRect(200, 20, 150, 100);
+
+      // Daire çiz
+      ctx.beginPath();
+      ctx.arc(100, 250, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "#00FF00"; // Yeşil renk
+      ctx.fill();
+
+      // Üçgen çiz
+      ctx.beginPath();
+      ctx.moveTo(250, 200);
+      ctx.lineTo(300, 300);
+      ctx.lineTo(200, 300);
+      ctx.closePath();
+      ctx.strokeStyle = "#FFA500"; // Turuncu renk
+      ctx.stroke();
+    </script>
+  </body>
+</html>
+
+<!-- 2 -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="myCanvas2" width="500" height="400" style="border:1px solid #000000;">
+      Tarayıcınız HTML canvas etiketini desteklemiyor.
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas2");
+      var ctx = canvas.getContext("2d");
+
+      // Metin ekle
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "blue";
+      ctx.fillText("Merhaba, Canvas!", 50, 50);
+
+      // Çerçeveli metin ekle
+      ctx.strokeStyle = "red";
+      ctx.strokeText("Çerçeveli Metin", 50, 100);
+
+      // Görüntü ekle
+      var img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 50, 150, 200, 100);
+      };
+      img.src = 'https://www.example.com/path/to/your/image.jpg';
+    </script>
+  </body>
+</html>

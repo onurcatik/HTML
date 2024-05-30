@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Kayıt Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kullanıcı Kayıt Formu</h1>
+    <form aria-labelledby="form-title" action="#" method="post">
+        <h2 id="form-title">Lütfen bilgilerinizi girin</h2>
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required aria-required="true">
+
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" required aria-required="true">
+
+        <label for="country">Ülke:</label>
+        <select id="country" name="country" required aria-required="true">
+            <option value="">Seçiniz...</option>
+            <option value="TR">Türkiye</option>
+            <option value="US">Amerika Birleşik Devletleri</option>
+            <option value="UK">Birleşik Krallık</option>
+        </select>
+
+        <button type="submit">Kayıt Ol</button>
+    </form>
+</body>
+</html>
+
+<!-- 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Tasarımı ve SEO</title>
+    <meta name="description" content="Bu sayfa, responsive web tasarımı ve SEO uyumlu içerik oluşturma hakkında bilgi verir.">
+    <meta name="keywords" content="responsive, web tasarımı, SEO, HTML, CSS">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        @media (min-width: 600px) {
+            .card {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .card img {
+                max-width: 40%;
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Tasarımı ve SEO</h1>
+    </header>
+    <div class="container">
+        <main>
+            <section class="card">
+                <img src="responsive-design.jpg" alt="Responsive web tasarımı örneği">
+                <div>
+                    <h2>Responsive Web Tasarımı</h2>
+                    <p>Responsive web tasarımı, web sitelerinin farklı cihazlarda ve ekran boyutlarında uyumlu ve kullanışlı olmasını sağlar. Bu, kullanıcı deneyimini artırır ve SEO performansını iyileştirir.</p>
+                </div>
+            </section>
+            <section class="card">
+                <img src="seo.jpg" alt="SEO uyumlu içerik">
+                <div>
+                    <h2>SEO Uyumlu İçerik</h2>
+                    <p>SEO uyumlu içerik, arama motorlarında daha yüksek sıralamalar elde etmek için optimize edilmiş metinler ve yapısal veri kullanır. Bu, web sitenizin görünürlüğünü artırır ve daha fazla organik trafik sağlar.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Responsive Web Tasarımı ve SEO Örneği</p>
+    </footer>
+</body>
+</html>
+

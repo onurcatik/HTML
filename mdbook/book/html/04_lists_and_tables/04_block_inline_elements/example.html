@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blok ve Satır İçi Elemanlar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        article {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blok ve Satır İçi Elemanlar</h1>
+    </header>
+
+    <article>
+        <h2>Giriş</h2>
+        <p>Bu makalede, HTML blok ve satır içi elemanları hakkında bilgi edineceksiniz. Bu elemanlar, web sayfalarınızın düzenini ve görünümünü etkiler.</p>
+        
+        <h2>Blok Düzeyindeki Elemanlar</h2>
+        <div class="content">
+            <p>Blok düzeyindeki elemanlar, genellikle yapısal içerik için kullanılır ve her zaman yeni bir satırda başlarlar. Örnekler:</p>
+            <div>
+                <p>Bu bir paragraf örneğidir.</p>
+                <p>Bu da başka bir paragraf örneğidir.</p>
+            </div>
+        </div>
+
+        <h2>Satır İçi Elemanlar</h2>
+        <div class="content">
+            <p>Satır içi elemanlar, metin veya diğer içeriklerle aynı satırda gösterilir. Örnekler:</p>
+            <p>Bu bir <span class="highlight">vurgulanmış</span> kelimedir ve bu da <a href="#">bir bağlantıdır</a>.</p>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Blok ve Satır İçi Elemanlar Hakkında</p>
+    </footer>
+</body>
+</html>
