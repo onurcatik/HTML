@@ -1,0 +1,1757 @@
+<!DOCTYPE HTML>
+<html lang="tr" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>HTML</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html/index.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/01_introduction/01_introduction/index.html"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/01_introduction/02_structure_of_html/index.html"><strong aria-hidden="true">1.1.1.</strong> Structure of HTML</a></li><li class="chapter-item expanded "><a href="html/01_introduction/03_html_headings/index.html"><strong aria-hidden="true">1.1.2.</strong> HTML Headings</a></li><li class="chapter-item expanded "><a href="html/01_introduction/04_html_paragraphs/index.html"><strong aria-hidden="true">1.1.3.</strong> HTML Paragraphs</a></li><li class="chapter-item expanded "><a href="html/01_introduction/05_assignment/index.html"><strong aria-hidden="true">1.1.4.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="html/02_html_styling/index.html"><strong aria-hidden="true">1.2.</strong> HTML Styling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/02_html_styling/01_styles/index.html"><strong aria-hidden="true">1.2.1.</strong> Styles</a></li><li class="chapter-item expanded "><a href="html/02_html_styling/02_text-formating/index.html"><strong aria-hidden="true">1.2.2.</strong> Text Formating</a></li><li class="chapter-item expanded "><a href="html/02_html_styling/03_indentation/index.html"><strong aria-hidden="true">1.2.3.</strong> Indentation</a></li><li class="chapter-item expanded "><a href="html/02_html_styling/04_quatation/index.html"><strong aria-hidden="true">1.2.4.</strong> Quatation</a></li><li class="chapter-item expanded "><a href="html/02_html_styling/05_assignment/index.html"><strong aria-hidden="true">1.2.5.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/index.html"><strong aria-hidden="true">1.3.</strong> HTML Multimedia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/03_html_multimedia/01_comments/index.html"><strong aria-hidden="true">1.3.1.</strong> Comments</a></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/02_colors/index.html"><strong aria-hidden="true">1.3.2.</strong> Colors</a></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/03_links/index.html"><strong aria-hidden="true">1.3.3.</strong> Links</a></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/04_images/index.html"><strong aria-hidden="true">1.3.4.</strong> Images</a></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/05_videos/index.html"><strong aria-hidden="true">1.3.5.</strong> Videos</a></li><li class="chapter-item expanded "><a href="html/03_html_multimedia/06_assignment/index.html"><strong aria-hidden="true">1.3.6.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="html/04_lists_and_tables/index.html"><strong aria-hidden="true">1.4.</strong> List and Tables</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/04_lists_and_tables/01_favicon/index.html"><strong aria-hidden="true">1.4.1.</strong> Favicon</a></li><li class="chapter-item expanded "><a href="html/04_lists_and_tables/02_tables/index.html"><strong aria-hidden="true">1.4.2.</strong> Tables</a></li><li class="chapter-item expanded "><a href="html/04_lists_and_tables/03_lists/index.html"><strong aria-hidden="true">1.4.3.</strong> Lists</a></li><li class="chapter-item expanded "><a href="html/04_lists_and_tables/04_block_inline_elements/index.html"><strong aria-hidden="true">1.4.4.</strong> Block Inline Elements</a></li><li class="chapter-item expanded "><a href="html/04_lists_and_tables/05_assignment/index.html"><strong aria-hidden="true">1.4.5.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="html/05_html_form/index.html"><strong aria-hidden="true">1.5.</strong> Form</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/05_html_form/01_Iframes/index.html"><strong aria-hidden="true">1.5.1.</strong> Iframes</a></li><li class="chapter-item expanded "><a href="html/05_html_form/02_multimedia/index.html"><strong aria-hidden="true">1.5.2.</strong> Multimedia</a></li><li class="chapter-item expanded "><a href="html/05_html_form/03_forms/index.html"><strong aria-hidden="true">1.5.3.</strong> Forms</a></li><li class="chapter-item expanded "><a href="html/05_html_form/04_canvas/index.html"><strong aria-hidden="true">1.5.4.</strong> Canvas</a></li><li class="chapter-item expanded "><a href="html/05_html_form/05_emojis/index.html"><strong aria-hidden="true">1.5.5.</strong> Emojis</a></li><li class="chapter-item expanded "><a href="html/05_html_form/06_assignment/index.html"><strong aria-hidden="true">1.5.6.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/index.html"><strong aria-hidden="true">1.6.</strong> Semantic Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/01_semantic/index.html"><strong aria-hidden="true">1.6.1.</strong> Semantic</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/02_doctype/index.html"><strong aria-hidden="true">1.6.2.</strong> Doctype</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/03_viewport/index.html"><strong aria-hidden="true">1.6.3.</strong> Viewport</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/04_embed_pdf/index.html"><strong aria-hidden="true">1.6.4.</strong> Embed PDF</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/05_dir_attribute/index.html"><strong aria-hidden="true">1.6.5.</strong> dir attribute</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/06_validator/index.html"><strong aria-hidden="true">1.6.6.</strong> Validator</a></li><li class="chapter-item expanded "><a href="html/06_html_semantic_elements/07_assignment/index.html"><strong aria-hidden="true">1.6.7.</strong> Assignment</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">HTML</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="html"><a class="header" href="#html">HTML</a></h1>
+<h2 id="1-introduction"><a class="header" href="#1-introduction">1. Introduction</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#1-1-introduction">1.1 Introduction</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#1-2-structure-of-html">1.2 Structure of HTML</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#1-3-html-headings">1.3 HTML Headings</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#1-4-html-paragraphs">1.4 HTML Paragraphs</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#1-5-assignment">1.5 Assignment</a></li>
+</ul>
+<h2 id="2-html-styling"><a class="header" href="#2-html-styling">2. HTML Styling</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/./02_html_styling/01_styles/">2.1 Styles</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#2-2-text-formatting">2.2 Text Formatting</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#2-3-indentation">2.3 Indentation</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#2-4-quotation">2.4 Quotation</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#2-5-assignment">2.5 Assignment</a></li>
+</ul>
+<h2 id="3-html-multimedia"><a class="header" href="#3-html-multimedia">3. HTML Multimedia</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-1-comments">3.1 Comments</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-2-colors">3.2 Colors</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-3-links">3.3 Links</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-4-images">3.4 Images</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-5-videos">3.5 Videos</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#3-6-assignment">3.6 Assignment</a></li>
+</ul>
+<h2 id="4-lists-and-tables"><a class="header" href="#4-lists-and-tables">4. Lists and Tables</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#4-1-favicon">4.1 Favicon</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#4-2-tables">4.2 Tables</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#4-3-lists">4.3 Lists</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#4-4-block-inline-elements">4.4 Block Inline Elements</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#4-5-assignment">4.5 Assignment</a></li>
+</ul>
+<h2 id="5-html-form"><a class="header" href="#5-html-form">5. HTML Form</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-1-iframes">5.1 Iframes</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-2-multimedia">5.2 Multimedia</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-3-forms">5.3 Forms</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-4-canvas">5.4 Canvas</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-5-emojis">5.5 Emojis</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#5-6-assignment">5.6 Assignment</a></li>
+</ul>
+<h2 id="6-html-semantic-elements"><a class="header" href="#6-html-semantic-elements">6. HTML Semantic Elements</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-1-semantic">6.1 Semantic</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-2-doctype">6.2 Doctype</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-3-viewport">6.3 Viewport</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-4-embed-pdf">6.4 Embed PDF</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-5-dir-attribute">6.5 Dir Attribute</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-6-validator">6.6 Validator</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#6-7-assignment">6.7 Assignment</a></li>
+</ul>
+<h2 id="7-html-personal-blog"><a class="header" href="#7-html-personal-blog">7. HTML Personal Blog</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="html/index.html#7-1-personal-blog">7.1 Personal Blog</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="htmlye-giriş"><a class="header" href="#htmlye-giriş">HTML'ye Giriş</a></h2>
+<h3 id="html-nedir"><a class="header" href="#html-nedir">HTML Nedir?</a></h3>
+<ul>
+<li>HTML, İngilizce "Hyper Text Markup Language" ifadesinin kısaltmasıdır.</li>
+<li>HTML, bir web sayfasının yapısını tanımlar.</li>
+<li>HTML öğeleri, tarayıcıya içeriği nasıl görüntüleyeceğini söyler.</li>
+</ul>
+<h3 id="html-Öğesi-nedir"><a class="header" href="#html-Öğesi-nedir">HTML Öğesi Nedir?</a></h3>
+<ul>
+<li>Bir HTML öğesi, bir başlangıç etiketi, içerik ve bir bitiş etiketi ile tanımlanır:</li>
+<li>Öğeler, başlık etiketleri, resim etiketleri, paragraf etiketleri, bağlantı etiketleri vb. olabilir.</li>
+</ul>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;h1&gt;Bu bir başlıktır&lt;/h1&gt;
+&lt;p&gt;Bu bir paragraftır&lt;/p&gt;
+&lt;a href="https://www.example.com"&gt;Bu bir bağlantıdır&lt;/a&gt;
+</code></pre>
+<h3 id="html-Öznitelikleri"><a class="header" href="#html-Öznitelikleri">HTML Öznitelikleri</a></h3>
+<ul>
+<li>Tüm HTML öğeleri <strong>özniteliklere</strong> sahip olabilir.</li>
+<li>Öznitelikler, öğeler hakkında <strong>ek bilgi</strong> sağlar.</li>
+<li>Öznitelikler her zaman <strong>başlangıç etiketinde</strong> belirtilir.</li>
+<li>Öznitelikler genellikle ad/değer çiftleri şeklindedir: <strong>ad="değer"</strong></li>
+</ul>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;a href="https://www.example.com" title="Example"&gt;Bu bir bağlantıdır&lt;/a&gt;
+&lt;img src="image.jpg" alt="Örnek Resim"&gt;
+</code></pre>
+<h3 id="açıklamalı-kod-Örnekleri"><a class="header" href="#açıklamalı-kod-Örnekleri">Açıklamalı Kod Örnekleri</a></h3>
+<p><strong>1. Basit HTML Yapısı</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Örnek HTML Sayfası&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hoş Geldiniz!&lt;/h1&gt;
+    &lt;p&gt;Bu bir örnek HTML sayfasıdır.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu kod, basit bir HTML sayfasının temel yapısını göstermektedir. Doctype, HTML5 kullanıldığını belirtir. <code>head</code> bölümü sayfanın başlık bilgisini içerir. <code>body</code> bölümü ise sayfanın asıl içeriğini barındırır.</p>
+<p><strong>2. Özniteliklerin Kullanımı</strong></p>
+<pre><code class="language-html">&lt;img src="image.jpg" alt="Açıklama Metni" width="500" height="600"&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Example Sitesine Git&lt;/a&gt;
+</code></pre>
+<p>Bu örneklerde, <code>img</code> etiketi bir resim ekler ve <code>alt</code>, <code>width</code>, <code>height</code> öznitelikleri ile resim hakkında ek bilgiler sağlar. <code>a</code> etiketi ise bir bağlantı oluşturur ve <code>href</code> özniteliği ile bağlantının adresini, <code>target</code> özniteliği ile bağlantının yeni bir sekmede açılmasını belirtir.</p>
+<h3 id="bilimsel-ve-teknik-açıklamalar"><a class="header" href="#bilimsel-ve-teknik-açıklamalar">Bilimsel ve Teknik Açıklamalar</a></h3>
+<p>HTML (Hyper Text Markup Language), web sayfalarının temel yapı taşıdır. Her HTML belgesi, bir dizi öğeden oluşur. Bu öğeler, tarayıcıya içerik parçalarını nasıl düzenlemesi gerektiğini bildirir. Örneğin, <code>&lt;h1&gt;</code> ile <code>&lt;h6&gt;</code> etiketleri başlıkları belirtir ve içerik hiyerarşisini oluşturur. <code>&lt;p&gt;</code> etiketi paragrafları tanımlar ve metni düzenler.</p>
+<p>Öznitelikler, öğelerin işlevselliğini ve görünümünü daha spesifik hale getirir. Örneğin, <code>href</code> özniteliği bir bağlantının hedef URL'sini belirtir, <code>src</code> özniteliği ise bir resim dosyasının yolunu gösterir. Bu tür öznitelikler, HTML belgesinin etkileşimli ve kullanıcı dostu olmasını sağlar.</p>
+<h3 id="kritik-İnceleme"><a class="header" href="#kritik-İnceleme">Kritik İnceleme</a></h3>
+<p>HTML'nin doğru kullanımı, web sayfalarının erişilebilir ve etkili olmasını sağlar. Yanlış yapılandırılmış HTML, kullanıcı deneyimini olumsuz etkileyebilir ve arama motoru optimizasyonunu (SEO) düşürebilir. Ayrıca, HTML standartlarına uygun olmayan kodlar, tarayıcılar arasında uyumsuzluklara yol açabilir.</p>
+<p>Bu nedenle, HTML yazarken dikkat edilmesi gereken en önemli noktalar:</p>
+<ul>
+<li>Etiketlerin doğru şekilde kapatılması,</li>
+<li>Uygun özniteliklerin kullanılması,</li>
+<li>HTML5 standartlarına uyulmasıdır.</li>
+</ul>
+<p>HTML, web geliştirme sürecinin temelini oluşturur ve diğer teknolojiler (CSS, JavaScript) ile birlikte kullanıldığında güçlü ve dinamik web sayfaları oluşturmayı mümkün kılar.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-yapısının-temel-Öğeleri"><a class="header" href="#html-yapısının-temel-Öğeleri">HTML Yapısının Temel Öğeleri</a></h1>
+<h2 id="html-yapısının-yapısı"><a class="header" href="#html-yapısının-yapısı">HTML Yapısının Yapısı</a></h2>
+<p>HTML (Hypertext Markup Language), web sayfalarının yapısını ve içeriğini tanımlamak için kullanılan bir işaretleme dilidir. HTML belgeleri, belirli bir yapı ve sözdizimi kullanılarak oluşturulur. Bu yapıyı ve temel öğeleri anlamak, etkili ve doğru web sayfaları oluşturmanın temelidir.</p>
+<h3 id="1-doctype-bildirimi"><a class="header" href="#1-doctype-bildirimi">1. Doctype Bildirimi</a></h3>
+<p>HTML belgesinin başında yer alır ve belgenin HTML5 standardına uygun olduğunu belirtir. Doctype bildirimi, tarayıcılara belgenin hangi HTML sürümünü kullandığını bildirir.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<h3 id="2-html-etiketi"><a class="header" href="#2-html-etiketi">2. HTML Etiketi</a></h3>
+<p>HTML belgesinin kök öğesidir ve tüm diğer öğeleri kapsar. <code>&lt;html&gt;</code> etiketi, belgenin başlangıcını ve bitişini belirler.</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;!-- Belgenin içeriği buraya gelir --&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="3-başlık-head-bölümü"><a class="header" href="#3-başlık-head-bölümü">3. Başlık (Head) Bölümü</a></h3>
+<p><code>&lt;head&gt;</code> etiketi, belgenin meta verilerini içerir. Bu bölümdeki bilgiler tarayıcılar tarafından işlenir, ancak kullanıcıya doğrudan gösterilmez. <code>&lt;head&gt;</code> etiketi içinde sıkça kullanılan öğeler şunlardır:</p>
+<ul>
+<li><code>&lt;title&gt;</code>: Web sayfasının başlık çubuğunda görünen başlık.</li>
+<li><code>&lt;meta&gt;</code>: Belgenin karakter seti, yazar bilgisi, açıklama gibi meta bilgilerini tanımlar.</li>
+<li><code>&lt;link&gt;</code>: Harici stil dosyalarına bağlantı verir.</li>
+<li><code>&lt;script&gt;</code>: JavaScript kodları veya harici JavaScript dosyalarına bağlantı sağlar.</li>
+</ul>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;HTML'ye Giriş&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+</code></pre>
+<h3 id="4-gövde-body-bölümü"><a class="header" href="#4-gövde-body-bölümü">4. Gövde (Body) Bölümü</a></h3>
+<p><code>&lt;body&gt;</code> etiketi, belgenin görünür içeriğini içerir. Bu bölüm, kullanıcıların tarayıcıda gördüğü metinler, görüntüler, bağlantılar ve diğer içerikleri barındırır.</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;!-- Web sayfasının görünür içeriği buraya gelir --&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="5-başlık-etiketi"><a class="header" href="#5-başlık-etiketi">5. Başlık Etiketi</a></h3>
+<p>Başlık etiketleri (<code>&lt;h1&gt;</code>'den <code>&lt;h6&gt;</code>'ya kadar), içerik başlıklarını tanımlar. <code>&lt;h1&gt;</code> etiketi en önemli başlığı, <code>&lt;h6&gt;</code> ise en az önemli başlığı belirtir.</p>
+<pre><code class="language-html">&lt;h1&gt;HTML Nedir?&lt;/h1&gt;
+</code></pre>
+<h3 id="6-paragraf-etiketi"><a class="header" href="#6-paragraf-etiketi">6. Paragraf Etiketi</a></h3>
+<p>Paragraf etiketleri (<code>&lt;p&gt;</code>), metin paragraflarını tanımlar. Paragraf etiketi, metin bloğunu belirli bir yapıda sunar.</p>
+<pre><code class="language-html">&lt;p&gt;HTML, bir web sayfasının yapısını tanımlar.&lt;/p&gt;
+</code></pre>
+<h3 id="Örnek-html-belgesi"><a class="header" href="#Örnek-html-belgesi">Örnek HTML Belgesi</a></h3>
+<p>Aşağıda, yukarıda açıklanan tüm öğeleri içeren basit bir HTML belgesi örneği verilmiştir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML'ye Giriş&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;HTML Nedir?&lt;/h1&gt;
+  &lt;p&gt;HTML, bir web sayfasının yapısını tanımlar.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-başlıkları"><a class="header" href="#html-başlıkları">HTML Başlıkları</a></h1>
+<p>HTML başlıkları, <code>&lt;h1&gt;</code> ile <code>&lt;h6&gt;</code> etiketleri arasında tanımlanır.</p>
+<ul>
+<li><code>&lt;h1&gt;</code> en önemli başlığı tanımlar.</li>
+<li><code>&lt;h6&gt;</code> en az önemli başlığı tanımlar.</li>
+</ul>
+<p>Aşağıda, HTML başlıklarının nasıl kullanıldığını ve çıktılarının nasıl göründüğünü gösteren bir örnek bulunmaktadır:</p>
+<h3 id="html-kodu"><a class="header" href="#html-kodu">HTML Kodu:</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Text&lt;/h1&gt;
+    &lt;h2&gt;Text&lt;/h2&gt;
+    &lt;h3&gt;Text&lt;/h3&gt;
+    &lt;h4&gt;Text&lt;/h4&gt;
+    &lt;h5&gt;Text&lt;/h5&gt;
+    &lt;h6&gt;Text&lt;/h6&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="Çıktı"><a class="header" href="#Çıktı">Çıktı:</a></h3>
+<p>Bu kodun tarayıcıda nasıl görüneceği aşağıda belirtilmiştir:</p>
+<ul>
+<li><code>&lt;h1&gt;</code>: Text</li>
+<li><code>&lt;h2&gt;</code>: Text</li>
+<li><code>&lt;h3&gt;</code>: Text</li>
+<li><code>&lt;h4&gt;</code>: Text</li>
+<li><code>&lt;h5&gt;</code>: Text</li>
+<li><code>&lt;h6&gt;</code>: Text</li>
+</ul>
+<p>Her bir başlık etiketi, metnin boyutunu ve önemini belirler. <code>&lt;h1&gt;</code> etiketi, en büyük boyutta ve en vurgulu olarak görüntülenirken, <code>&lt;h6&gt;</code> etiketi en küçük boyutta ve en az vurgulu olarak görüntülenir.</p>
+<p>HTML başlıklarının kullanımı, bir web sayfasının yapısını ve içeriğin hiyerarşisini tanımlamada kritik bir rol oynar. Başlıklar, arama motorları ve ekran okuyucuları gibi araçlar tarafından içeriğin organizasyonunu anlamak için kullanılır. Bu nedenle, başlıkların doğru kullanımı, web erişilebilirliği ve SEO (Arama Motoru Optimizasyonu) için önemlidir.</p>
+<p>Başlık etiketleri arasında gereksiz boşluklar veya yanlış sıralama gibi hatalar, web sayfasının anlaşılabilirliğini ve erişilebilirliğini olumsuz yönde etkileyebilir. Başlıkların doğru sıralamayla kullanılması (örneğin, bir <code>&lt;h2&gt;</code> etiketi kullanmadan önce bir <code>&lt;h1&gt;</code> etiketi kullanmak) gereklidir.</p>
+<p>Bu basit HTML başlıkları örneği, temel HTML yapı taşlarından birini anlamanızı sağlar. Web geliştirme projelerinde bu yapıyı doğru kullanmak, sayfanızın hem kullanıcılar hem de arama motorları tarafından daha iyi anlaşılmasını ve değerlendirilmesini sağlar.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-paragrafları"><a class="header" href="#html-paragrafları">HTML Paragrafları</a></h1>
+<p>HTML <code>&lt;p&gt;</code> elementi, web sayfası içeriğinde paragrafları tanımlamak için kullanılan temel bir HTML etiketidir. Bu kapsamlı örnek, paragrafların nasıl tanımlanacağını, stil verileceğini ve çeşitli uygulamalarla nasıl kullanılacağını detaylandırmaktadır.</p>
+<h2 id="temel-html-paragraf-yapısı"><a class="header" href="#temel-html-paragraf-yapısı">Temel HTML Paragraf Yapısı</a></h2>
+<p>Bir HTML belgesinde paragraflar, <code>&lt;p&gt;</code> etiketi kullanılarak tanımlanır. İşte temel bir örnek:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Paragraf Örneği&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Bu, bir paragraf örneğidir. HTML'de paragraflar, metni anlamlı bloklar halinde organize etmek için kullanılır.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, <code>&lt;p&gt;</code> etiketi içinde yer alan metin bir paragraf olarak tanımlanmıştır ve tarayıcıda yeni bir satırda görüntülenir.</p>
+<h2 id="birden-fazla-paragraf"><a class="header" href="#birden-fazla-paragraf">Birden Fazla Paragraf</a></h2>
+<p>Birden fazla paragraf kullanmak oldukça yaygındır. Her paragraf yeni bir satırda başlar ve tarayıcılar bu paragraflar arasında boşluk bırakır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Birden Fazla Paragraf Örneği&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Bu, ilk paragraf. Tarayıcılar, her paragrafın öncesine ve sonrasına otomatik olarak boşluk ekler.&lt;/p&gt;
+    &lt;p&gt;Bu, ikinci paragraf. Paragraflar, metni anlamlı bölümler halinde organize etmek için önemlidir.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="paragraflara-css-ile-stil-vermek"><a class="header" href="#paragraflara-css-ile-stil-vermek">Paragraflara CSS ile Stil Vermek</a></h2>
+<p>Paragrafların görünümünü özelleştirmek için CSS kullanılır. Aşağıda, bir HTML belgesinde paragraflara nasıl stil verileceğini gösteren bir örnek bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;CSS ile Stil Verilmiş Paragraflar&lt;/title&gt;
+    &lt;style&gt;
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Bu, CSS ile stil verilmiş bir paragraftır. Yazı tipi Arial, boyutu 18 piksel ve rengi koyu gri olarak ayarlanmıştır.&lt;/p&gt;
+    &lt;p class="highlight"&gt;Bu paragrafın arka planı sarı renkle vurgulanmıştır. CSS sınıfları, belirli paragraflara farklı stiller uygulamak için kullanışlıdır.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, tüm paragraflar Arial yazı tipi, 18 piksel yazı boyutu ve koyu gri renkle stilize edilmiştir. Ayrıca, <code>.highlight</code> sınıfı, belirli bir paragrafı sarı renkle vurgulamak için kullanılmıştır.</p>
+<h2 id="gelişmiş-paragraf-kullanımı"><a class="header" href="#gelişmiş-paragraf-kullanımı">Gelişmiş Paragraf Kullanımı</a></h2>
+<p>Paragraflar, daha karmaşık içerik düzenlemelerinde de kullanılabilir. Örneğin, uzun bir metin içeriği ile birlikte resimler, bağlantılar ve diğer HTML elementleri kullanılabilir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Gelişmiş Paragraf Kullanımı&lt;/title&gt;
+    &lt;style&gt;
+        p {
+            font-family: 'Georgia', serif;
+            font-size: 16px;
+            color: #444;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        img {
+            float: right;
+            margin: 0 0 10px 10px;
+            width: 200px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Gelişmiş paragraf örneği burada. HTML paragrafları, resimler ve diğer elementlerle birlikte kullanılabilir. &lt;img src="image.jpg" alt="Örnek Resim"&gt; Bu, metni daha etkili ve görsel olarak çekici hale getirebilir.&lt;/p&gt;
+    &lt;p&gt;Ek paragraflar, metin akışını devam ettirir ve okuyucuların içeriği daha iyi anlamalarına yardımcı olur. Web geliştirme, doğru HTML ve CSS kullanımıyla kullanıcı deneyimini iyileştirmeyi amaçlar.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu örnekte, bir paragrafın içine yerleştirilmiş bir resim vardır. Resim, metnin sağında yer almakta ve metin, resmin etrafında akmaktadır. Bu, metni daha görsel ve ilgi çekici hale getirir.</p>
+<h2 id="sonuç"><a class="header" href="#sonuç">Sonuç</a></h2>
+<p>HTML <code>&lt;p&gt;</code> elementi, web sayfalarında metni organize etmek için temel bir araçtır. Paragraflar, içeriği anlamlı bölümler halinde düzenler ve CSS ile stil verilerek görsel olarak çekici hale getirilebilir. Bu kapsamlı örnek, HTML paragraflarının yapısını, kullanımını ve stil verme yöntemlerini detaylı bir şekilde açıklamaktadır.</p>
+<p>Paragrafların doğru kullanımı, web sayfalarının okunabilirliğini ve kullanıcı deneyimini önemli ölçüde artırır. Bu bilgiler, web geliştiricilerin HTML paragraflarını etkili bir şekilde kullanmalarına yardımcı olacaktır.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="html-stil-Özellikleri"><a class="header" href="#html-stil-Özellikleri">HTML Stil Özellikleri</a></h1>
+<p>HTML <code>style</code> özelliği, bir öğeye renk, yazı tipi, boyut ve daha fazlasını eklemek için kullanılır.</p>
+<h2 id="html-stil-Özelliği"><a class="header" href="#html-stil-Özelliği">HTML Stil Özelliği</a></h2>
+<p>HTML öğesinin stilini ayarlamak, <code>style</code> özniteliği ile yapılabilir. HTML <code>style</code> özniteliği şu söz dizimine sahiptir:</p>
+<pre><code class="language-html">&lt;element style="property:value;"&gt;
+</code></pre>
+<p>Bu öznitelik, CSS (Cascading Style Sheets) kullanılarak öğenin görünümünü değiştirmek için kullanılır.</p>
+<h2 id="arka-plan-rengi"><a class="header" href="#arka-plan-rengi">Arka Plan Rengi</a></h2>
+<p>CSS <code>background-color</code> özelliği, bir HTML öğesi için arka plan rengini tanımlar. Örnek kullanım:</p>
+<pre><code class="language-html">&lt;div style="background-color: yellow;"&gt;
+    Bu div elemanının arka plan rengi sarıdır.
+&lt;/div&gt;
+</code></pre>
+<h2 id="metin-rengi"><a class="header" href="#metin-rengi">Metin Rengi</a></h2>
+<p>CSS <code>color</code> özelliği, bir HTML öğesi için metin rengini tanımlar. Örnek kullanım:</p>
+<pre><code class="language-html">&lt;p style="color: blue;"&gt;
+    Bu paragrafın metin rengi mavidir.
+&lt;/p&gt;
+</code></pre>
+<h2 id="yazı-tipleri"><a class="header" href="#yazı-tipleri">Yazı Tipleri</a></h2>
+<p>CSS <code>font-family</code> özelliği, bir HTML öğesi için kullanılacak yazı tipini tanımlar. Örnek kullanım:</p>
+<pre><code class="language-html">&lt;h1 style="font-family: Arial, sans-serif;"&gt;
+    Bu başlık Arial yazı tipini kullanır.
+&lt;/h1&gt;
+</code></pre>
+<h3 id="Önemli-notlar"><a class="header" href="#Önemli-notlar">Önemli Notlar:</a></h3>
+<ol>
+<li>
+<p><strong>Uyumluluk:</strong> Tüm tarayıcıların tüm CSS özelliklerini desteklemediğini unutmayın. Özellikle eski tarayıcılarda bazı özellikler çalışmayabilir.</p>
+</li>
+<li>
+<p><strong>Spesifiklik ve Kalıtım:</strong> CSS kuralları belirli bir hiyerarşiye göre uygulanır. Bir öğeye uygulanan stil, daha spesifik veya önemli bir stil ile değiştirilebilir.</p>
+</li>
+<li>
+<p><strong>Özellik Değerleri:</strong> CSS özelliklerinin değerleri genellikle anahtar-değer çiftleri olarak tanımlanır. Örneğin, <code>color</code> özelliği için değer bir renk adı veya bir renk kodu olabilir.</p>
+</li>
+</ol>
+<p>Bu temel bilgiler, HTML öğelerine stil eklemek için kullanabileceğiniz CSS özelliklerinin nasıl kullanılacağını anlamanıza yardımcı olacaktır. Daha ayrıntılı bilgi için CSS spesifikasyonlarına ve ilgili belgelere başvurabilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-metin-biçimlendirme"><a class="header" href="#html-metin-biçimlendirme"><strong>HTML Metin Biçimlendirme</strong></a></h1>
+<ul>
+<li>
+<p>HTML, özel anlamı olan metinleri tanımlamak için çeşitli elementler içerir.</p>
+</li>
+<li>
+<p>Biçimlendirme elementleri, özel türdeki metinleri görüntülemek için tasarlanmıştır:</p>
+</li>
+<li>
+<p><code>&lt;b&gt;</code> - Kalın metin</p>
+</li>
+<li>
+<p><code>&lt;strong&gt;</code> - Önemli metin</p>
+</li>
+<li>
+<p><code>&lt;i&gt;</code> - İtalik metin</p>
+</li>
+<li>
+<p><code>&lt;em&gt;</code> - Vurgulanmış metin</p>
+</li>
+<li>
+<p><code>&lt;mark&gt;</code> - İşaretlenmiş metin</p>
+</li>
+<li>
+<p><code>&lt;small&gt;</code> - Küçük metin</p>
+</li>
+<li>
+<p><code>&lt;del&gt;</code> - Silinmiş metin</p>
+</li>
+<li>
+<p><code>&lt;ins&gt;</code> - Eklenmiş metin</p>
+</li>
+<li>
+<p><code>&lt;sub&gt;</code> - Alt simge metin</p>
+</li>
+<li>
+<p><code>&lt;sup&gt;</code> - Üst simge metin</p>
+</li>
+</ul>
+<h2 id="detaylı-açıklama-ve-kullanım"><a class="header" href="#detaylı-açıklama-ve-kullanım">Detaylı Açıklama ve Kullanım</a></h2>
+<p>HTML, web sayfalarındaki metinlerin çeşitli şekillerde biçimlendirilmesine olanak tanıyan birçok element sunar. Bu elementler, metinlerin önemini, stilini ve diğer özel anlamlarını vurgulamak için kullanılır. Aşağıda, her bir biçimlendirme elementinin detaylı açıklaması ve kullanımı verilmiştir:</p>
+<h3 id="1-b---kalın-metin"><a class="header" href="#1-b---kalın-metin">1. <code>&lt;b&gt;</code> - Kalın Metin</a></h3>
+<p><code>&lt;b&gt;</code> elementi, içindeki metni kalın yapar. Bu element, görsel olarak metni kalınlaştırmak için kullanılır ancak içeriğin anlamında bir vurgu yapmaz.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;b&gt;Örnek Metin&lt;/b&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="2-strong---Önemli-metin"><a class="header" href="#2-strong---Önemli-metin">2. <code>&lt;strong&gt;</code> - Önemli Metin</a></h3>
+<p><code>&lt;strong&gt;</code> elementi, içindeki metni önemli olarak belirtir. Bu element, hem görsel olarak kalın metin oluşturur hem de metnin önemli olduğunu vurgular. Ekran okuyucular bu metni daha güçlü bir şekilde okur.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;strong&gt;Önemli Metin&lt;/strong&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="3-i---İtalik-metin"><a class="header" href="#3-i---İtalik-metin">3. <code>&lt;i&gt;</code> - İtalik Metin</a></h3>
+<p><code>&lt;i&gt;</code> elementi, içindeki metni italik yapar. Bu element genellikle yabancı kelimeler, düşünce veya vurgulamak istenen metin parçaları için kullanılır.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;i&gt;İtalik Metin&lt;/i&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="4-em---vurgulanmış-metin"><a class="header" href="#4-em---vurgulanmış-metin">4. <code>&lt;em&gt;</code> - Vurgulanmış Metin</a></h3>
+<p><code>&lt;em&gt;</code> elementi, içindeki metni vurgulamak için kullanılır. Bu element, hem görsel olarak metni italik yapar hem de metnin vurgulanmış olduğunu belirtir. Ekran okuyucular bu metni daha güçlü bir şekilde okur.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;em&gt;Vurgulanmış Metin&lt;/em&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="5-mark---İşaretlenmiş-metin"><a class="header" href="#5-mark---İşaretlenmiş-metin">5. <code>&lt;mark&gt;</code> - İşaretlenmiş Metin</a></h3>
+<p><code>&lt;mark&gt;</code> elementi, içindeki metni işaretlemek için kullanılır. Bu element, metni sarı bir arka plan ile vurgular ve dikkat çekici hale getirir.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;mark&gt;İşaretlenmiş Metin&lt;/mark&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="6-small---küçük-metin"><a class="header" href="#6-small---küçük-metin">6. <code>&lt;small&gt;</code> - Küçük Metin</a></h3>
+<p><code>&lt;small&gt;</code> elementi, içindeki metni küçük yapar. Bu element genellikle dipnotlar veya önemsiz detaylar için kullanılır.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;small&gt;Küçük Metin&lt;/small&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="7-del---silinmiş-metin"><a class="header" href="#7-del---silinmiş-metin">7. <code>&lt;del&gt;</code> - Silinmiş Metin</a></h3>
+<p><code>&lt;del&gt;</code> elementi, içindeki metnin silindiğini belirtir. Bu element, metnin üzerine bir çizgi çekerek silindiğini gösterir.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;del&gt;Silinmiş Metin&lt;/del&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="8-ins---eklenmiş-metin"><a class="header" href="#8-ins---eklenmiş-metin">8. <code>&lt;ins&gt;</code> - Eklenmiş Metin</a></h3>
+<p><code>&lt;ins&gt;</code> elementi, içindeki metnin eklendiğini belirtir. Bu element, metni altı çizili yaparak eklendiğini gösterir.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;ins&gt;Eklenmiş Metin&lt;/ins&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="9-sub---alt-simge-metin"><a class="header" href="#9-sub---alt-simge-metin">9. <code>&lt;sub&gt;</code> - Alt Simge Metin</a></h3>
+<p><code>&lt;sub&gt;</code> elementi, içindeki metni alt simge yapar. Bu element genellikle kimyasal formüller veya matematiksel ifadeler için kullanılır.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;sub&gt;Alt Simge Metin&lt;/sub&gt;&lt;/p&gt;
+</code></pre>
+<h3 id="10-sup---Üst-simge-metin"><a class="header" href="#10-sup---Üst-simge-metin">10. <code>&lt;sup&gt;</code> - Üst Simge Metin</a></h3>
+<p><code>&lt;sup&gt;</code> elementi, içindeki metni üst simge yapar. Bu element genellikle üst simge gerektiren matematiksel ifadeler veya dipnotlar için kullanılır.</p>
+<pre><code class="language-html">&lt;p&gt;&lt;sup&gt;Üst Simge Metin&lt;/sup&gt;&lt;/p&gt;
+</code></pre>
+<p>Bu elementler, HTML'de metin biçimlendirme için oldukça kullanışlıdır ve web sayfalarındaki içeriğin daha etkili bir şekilde sunulmasına yardımcı olur. Bu elementlerin doğru kullanımı, web sayfalarındaki içeriğin hem görsel olarak çekici hem de anlam açısından zengin olmasını sağlar.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-girintileme"><a class="header" href="#html-girintileme">HTML Girintileme</a></h1>
+<ul>
+<li>Girintileme, bir kod satırının başındaki boşlukları ifade eder.</li>
+<li>HTML belgelerinde kodu daha okunabilir ve anlaşılır hale getirmek için girintileme önemlidir.</li>
+<li>Doğru girintileme, belgelerin bakımı ve geliştirilmesi sırasında büyük kolaylık sağlar.</li>
+</ul>
+<h2 id="girintileme-Örnekleri"><a class="header" href="#girintileme-Örnekleri">Girintileme Örnekleri</a></h2>
+<p>Aşağıdaki örneklerde, girintilemenin etkisini açıkça görebilirsiniz. İlk örnek, girintileme olmadan yazılmış bir HTML kodunu, ikinci örnek ise doğru bir şekilde girintilenmiş aynı HTML kodunu göstermektedir.</p>
+<h3 id="girintileme-olmadan"><a class="header" href="#girintileme-olmadan">Girintileme Olmadan</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;HTML without Indentation&lt;/h1&gt;
+&lt;p&gt;We help developers to understand JavaScript &amp; React in depth&lt;/p&gt;
+&lt;p&gt;Web dev &amp; design resources.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="girintileme-ile"><a class="header" href="#girintileme-ile">Girintileme ile</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;HTML with Indentation&lt;/h1&gt;
+        &lt;p&gt;We help developers to understand JavaScript &amp; React in depth&lt;/p&gt;
+        &lt;p&gt;Web dev &amp; design resources.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="girintilemenin-Önemi"><a class="header" href="#girintilemenin-Önemi">Girintilemenin Önemi</a></h2>
+<p>Girintileme, kodun yapısını ve hiyerarşisini görsel olarak temsil etmeye yardımcı olur. Bu, özellikle karmaşık belgeler ve kod blokları ile çalışırken önemlidir. Aşağıda girintilemenin neden önemli olduğuna dair bazı ana noktalar bulunmaktadır:</p>
+<ol>
+<li><strong>Okunabilirlik</strong>: Girintileme, kodun mantıksal yapısını ortaya koyar ve okunabilirliğini artırır.</li>
+<li><strong>Bakım Kolaylığı</strong>: Girintili kodlar, hata ayıklamayı ve bakımı kolaylaştırır. Bir hata olduğunda veya yeni bir özellik eklenmek istendiğinde, doğru girintileme ile hangi kod bloklarının hangi işlevleri içerdiğini anlamak daha kolaydır.</li>
+<li><strong>Standartlara Uyumluluk</strong>: Çoğu kodlama standardı ve en iyi uygulama rehberi, girintilemenin kullanılmasını önerir.</li>
+<li><strong>İşbirliği</strong>: Ekip çalışması sırasında, farklı geliştiriciler aynı kod üzerinde çalıştıklarında, standart girintileme kuralları kodun tutarlılığını sağlar.</li>
+</ol>
+<h2 id="girintileme-kuralları"><a class="header" href="#girintileme-kuralları">Girintileme Kuralları</a></h2>
+<p>HTML'de doğru girintileme yaparken bazı temel kurallara uymak gereklidir:</p>
+<ul>
+<li><strong>Her Etiket İçin Girinti</strong>: Her iç içe geçen etiket için bir girinti seviyesine ekleyin.</li>
+<li><strong>Tutarlılık</strong>: Girintilemede tutarlılık önemlidir. Genellikle bir sekme veya iki boşluk kullanılabilir, ancak bir projede hangisi seçildiyse ona sadık kalınmalıdır.</li>
+<li><strong>Doğru Kapatma</strong>: Açılış etiketleri ve kapanış etiketleri aynı hiyerarşi seviyesinde olmalıdır.</li>
+</ul>
+<h2 id="sonuç-1"><a class="header" href="#sonuç-1">Sonuç</a></h2>
+<p>Girintileme, HTML kodlamasında önemli bir yere sahiptir. Kodun okunabilirliği, bakım kolaylığı ve ekip çalışması gibi konularda büyük avantajlar sağlar. Yukarıdaki örnekler ve kurallar doğrultusunda, HTML belgelerinizi daha düzenli ve profesyonel hale getirebilirsiniz.</p>
+<p>Bu makale, HTML girintilemenin önemini ve uygulanabilirliğini kapsamlı bir şekilde açıklamaktadır. Kod yazarken bu prensiplere dikkat etmek, geliştiricilerin işlerini kolaylaştırır ve daha kaliteli yazılımlar üretmelerine katkı sağlar.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-alıntılar"><a class="header" href="#html-alıntılar">HTML Alıntılar</a></h1>
+<h2 id="html-q-kısa-alıntılar-İçin"><a class="header" href="#html-q-kısa-alıntılar-İçin"><strong>HTML <code>&lt;q&gt;</code> Kısa Alıntılar İçin</strong></a></h2>
+<ul>
+<li>HTML <code>&lt;q&gt;</code> etiketi, kısa bir alıntıyı tanımlar.</li>
+<li>Tarayıcılar genellikle alıntının etrafına tırnak işaretleri ekler.</li>
+</ul>
+<p>HTML <code>&lt;q&gt;</code> etiketi, kısa ve satır içi alıntılar için kullanılır. Bu etiket, alıntının kaynağını belirtmek için kullanışlıdır. Tarayıcılar bu etiketi kullanarak, alıntının etrafına otomatik olarak tırnak işaretleri ekler, bu da alıntının metin içerisinde daha belirgin olmasını sağlar.</p>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;p&gt;Albert Einstein bir keresinde &lt;q&gt;Hayal gücü bilgiden daha önemlidir&lt;/q&gt; demiştir.&lt;/p&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, <code>&lt;q&gt;</code> etiketi kullanılarak Einstein'a ait bir alıntı belirtilmiştir.</p>
+<h2 id="html-blockquote-alıntılar-İçin"><a class="header" href="#html-blockquote-alıntılar-İçin"><strong>HTML <code>&lt;blockquote&gt;</code> Alıntılar İçin</strong></a></h2>
+<ul>
+<li>HTML <code>&lt;blockquote&gt;</code> elementi, başka bir kaynaktan alıntılanan bir bölümü tanımlar.</li>
+<li>Tarayıcılar genellikle <code>&lt;blockquote&gt;</code> elementlerini girintili olarak gösterir.</li>
+</ul>
+<p>HTML <code>&lt;blockquote&gt;</code> etiketi, daha uzun ve blok halinde alıntılar için kullanılır. Bu etiket, genellikle bir paragraf veya daha uzun metin bölümleri için kullanılır ve tarayıcılar bu etiketi kullanarak alıntıyı sayfanın geri kalanından ayırmak için girinti ekler.</p>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;blockquote cite="https://www.example.com/einstein"&gt;
+    &lt;p&gt;Hayal gücü bilgiden daha önemlidir. Bilgi sınırlıdır. Hayal gücü ise tüm dünyayı kapsar.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, bir alıntı <code>&lt;blockquote&gt;</code> etiketi içinde belirtilmiştir ve <code>cite</code> özelliği kullanılarak alıntının kaynağı verilmiştir.</p>
+<h2 id="html-abbr-kısaltmalar-İçin"><a class="header" href="#html-abbr-kısaltmalar-İçin"><strong>HTML <code>&lt;abbr&gt;</code> Kısaltmalar İçin</strong></a></h2>
+<ul>
+<li>HTML <code>&lt;abbr&gt;</code> etiketi, bir kısaltma veya akronimi tanımlar, örneğin "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</li>
+<li>Kısaltmaların işaretlenmesi, tarayıcılar, çeviri sistemleri ve arama motorları için faydalı bilgiler sağlayabilir.</li>
+</ul>
+<p>HTML <code>&lt;abbr&gt;</code> etiketi, metin içerisinde geçen kısaltmaların veya akronimlerin tanımlanması için kullanılır. Bu etiket, kullanıcıya veya makineye kısaltmanın anlamını belirtmek için kullanılır ve bu sayede tarayıcılar, çeviri sistemleri ve arama motorları bu bilgiyi daha iyi anlayabilir.</p>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; bir belge işaretleme dilidir.&lt;/p&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, <code>&lt;abbr&gt;</code> etiketi kullanılarak "HTML" kısaltmasının açılımı belirtilmiştir. <code>title</code> özelliği, kısaltmanın tam anlamını vermek için kullanılır ve kullanıcı fareyi kısaltmanın üzerine getirdiğinde bu bilgi görüntülenir.</p>
+<p>Bu etiketlerin doğru ve etkili kullanımı, web sayfalarının anlaşılabilirliğini ve erişilebilirliğini artırır. Bu nedenle, HTML belgeleri oluştururken bu etiketlerin doğru kullanımına özen göstermek önemlidir.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="html-yorumları"><a class="header" href="#html-yorumları"><strong>HTML Yorumları</strong></a></h1>
+<ul>
+<li>HTML yorumları tarayıcıda görüntülenmez, ancak HTML kaynak kodunuzu belgelemeye yardımcı olabilirler.</li>
+</ul>
+<h2 id="html-yorum-etiketi"><a class="header" href="#html-yorum-etiketi">HTML Yorum Etiketi</a></h2>
+<ul>
+<li>HTML kaynağınıza yorum eklemek için aşağıdaki söz dizimini kullanabilirsiniz:</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Bu bir yorumdur --&gt;
+</code></pre>
+<h2 id="İçerik-gizleme"><a class="header" href="#İçerik-gizleme"><strong>İçerik Gizleme</strong></a></h2>
+<ul>
+<li>Yorumlar içerik gizlemek için kullanılabilir.</li>
+<li>Bu, geçici olarak içerik gizlemeniz gerektiğinde faydalı olabilir:</li>
+</ul>
+<pre><code class="language-html">&lt;!-- &lt;p&gt;Bu içerik gizlendi.&lt;/p&gt; --&gt;
+</code></pre>
+<h2 id="satır-İçi-İçerik-gizleme"><a class="header" href="#satır-İçi-İçerik-gizleme"><strong>Satır İçi İçerik Gizleme</strong></a></h2>
+<ul>
+<li>Yorumlar, HTML kodunun ortasındaki bölümleri gizlemek için kullanılabilir.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;Bu paragrafın &lt;!-- yorum içindeki kısmı gizlenmiştir --&gt; geri kalanı görüntülenir.&lt;/p&gt;
+</code></pre>
+<p>Bu anlatım, HTML yorumlarının nasıl kullanılacağını ve çeşitli senaryolarda nasıl uygulanacağını kapsamaktadır. HTML yorumları, özellikle büyük ve karmaşık projelerde, kodun anlaşılabilirliğini artırmak ve geçici değişiklikler yapmak için oldukça kullanışlıdır. Bu, geliştiricilerin kod tabanında gezinmesini ve işbirliği yapmasını kolaylaştırır. HTML yorumlarının doğru kullanımı, iyi bir kod yazma pratiği olarak kabul edilir ve kodun bakımını kolaylaştırır.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-renkleri"><a class="header" href="#html-renkleri">HTML Renkleri</a></h1>
+<ul>
+<li>HTML'de, bir renk bir renk adı kullanılarak belirtilebilir:</li>
+</ul>
+<h2 id="arka-plan-rengi-1"><a class="header" href="#arka-plan-rengi-1">Arka Plan Rengi</a></h2>
+<ul>
+<li>HTML öğeleri için arka plan rengini ayarlayabilirsiniz:</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1 style="background-color: DodgerBlue;"&gt;Onur Çatık&lt;/h1&gt;
+    &lt;p style="background-color: yellow;"&gt;
+      We help developers to understand JavaScript &amp; React in depth
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki kodda, <code>&lt;h1&gt;</code> öğesi için arka plan rengi <code>DodgerBlue</code> olarak ayarlanmıştır ve <code>&lt;p&gt;</code> öğesi için arka plan rengi <code>yellow</code> olarak ayarlanmıştır. HTML öğelerine içsel stiller kullanarak doğrudan stil uygulayabilirsiniz.</p>
+<h2 id="metin-rengi-1"><a class="header" href="#metin-rengi-1">Metin Rengi</a></h2>
+<ul>
+<li>Metnin rengini ayarlayabilirsiniz:</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1 style="color: DodgerBlue;"&gt;Onur Çatık&lt;/h1&gt;
+    &lt;p style="color: yellow;"&gt;
+      We help developers to understand JavaScript &amp; React in depth
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki kodda, <code>&lt;h1&gt;</code> öğesi için metin rengi <code>DodgerBlue</code> olarak ayarlanmıştır ve <code>&lt;p&gt;</code> öğesi için metin rengi <code>yellow</code> olarak ayarlanmıştır. Bu da HTML öğelerine içsel stiller kullanarak doğrudan stil uygulamanın bir başka yoludur.</p>
+<h2 id="sınır-rengi"><a class="header" href="#sınır-rengi">Sınır Rengi</a></h2>
+<ul>
+<li>Sınırların rengini ayarlayabilirsiniz:</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1 style="border: 2px solid DodgerBlue;"&gt;Onur Çatık&lt;/h1&gt;
+    &lt;p style="border: 2px solid yellow;"&gt;
+      We help developers to understand JavaScript &amp; React in depth
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki kodda, <code>&lt;h1&gt;</code> öğesi için sınır rengi <code>DodgerBlue</code> olarak ayarlanmıştır ve <code>&lt;p&gt;</code> öğesi için sınır rengi <code>yellow</code> olarak ayarlanmıştır. <code>border</code> özelliğini kullanarak HTML öğelerine sınır ekleyebilir ve rengini belirtebilirsiniz.</p>
+<p>Bu örnekler, HTML'de renkleri nasıl belirleyebileceğinizi ve kullanabileceğinizi göstermektedir. Renkleri içsel stiller kullanarak belirtebileceğiniz gibi, harici bir CSS dosyası kullanarak da belirtebilirsiniz. İçsel stiller küçük projeler için uygun olabilir, ancak büyük projelerde genellikle harici CSS dosyaları kullanmak daha düzenli ve yönetilebilir bir yapı sağlar.</p>
+<p>Renklerin doğru ve etkili bir şekilde kullanılması, web sayfalarının görsel olarak çekici ve kullanıcı dostu olmasına yardımcı olur. Bu nedenle, HTML ve CSS'de renkleri nasıl kullanacağınızı iyi anlamak önemlidir.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-bağlantıları"><a class="header" href="#html-bağlantıları">HTML Bağlantıları</a></h1>
+<ul>
+<li>Bağlantılar neredeyse tüm web sayfalarında bulunur. Bağlantılar, kullanıcıların sayfalar arasında tıklayarak gezinebilmesini sağlar.</li>
+<li>HTML bağlantıları, köprülerdir.</li>
+<li>Bir bağlantıya tıklayarak başka bir belgeye geçiş yapabilirsiniz.</li>
+<li>Farenizi bir bağlantının üzerine getirdiğinizde, fare oku küçük bir el şekline dönüşecektir.</li>
+<li>Not: Bir bağlantının metin olması gerekmez. Bir bağlantı, bir resim veya başka herhangi bir HTML öğesi olabilir!</li>
+</ul>
+<h2 id="html-bağlantıları---söz-dizimi"><a class="header" href="#html-bağlantıları---söz-dizimi">HTML Bağlantıları - Söz Dizimi</a></h2>
+<ul>
+<li>
+<p>HTML <code>&lt;a&gt;</code> etiketi bir köprüyü tanımlar. Aşağıdaki söz dizimine sahiptir:</p>
+<pre><code class="language-html">&lt;a href="url"&gt;link metni&lt;/a&gt;
+</code></pre>
+</li>
+<li>
+<p><code>&lt;a&gt;</code> etiketinin en önemli özelliği, bağlantının hedefini belirten <code>href</code> özniteliğidir.</p>
+</li>
+<li>
+<p><em>Bağlantı metni</em>, okuyucuya görünen kısımdır.</p>
+</li>
+<li>
+<p>Bağlantı metnine tıklamak, okuyucuyu belirtilen URL adresine yönlendirecektir.</p>
+</li>
+</ul>
+<p>Tarayıcılarda bağlantılar varsayılan olarak şu şekilde görünür:</p>
+<ul>
+<li>Ziyaret edilmemiş bir bağlantı altı çizili ve mavidir.</li>
+<li>Ziyaret edilmiş bir bağlantı altı çizili ve mordur.</li>
+<li>Aktif bir bağlantı altı çizili ve kırmızıdır.</li>
+</ul>
+<h2 id="html-bağlantıları---target-Özniteliği"><a class="header" href="#html-bağlantıları---target-Özniteliği">HTML Bağlantıları - target Özniteliği</a></h2>
+<ul>
+<li>
+<p>Varsayılan olarak, bağlantı verilen sayfa mevcut tarayıcı penceresinde görüntülenir. Bunu değiştirmek için bağlantı için başka bir hedef belirtmelisiniz.</p>
+</li>
+<li>
+<p><code>target</code> özniteliği, bağlantılı belgenin nerede açılacağını belirtir.</p>
+</li>
+<li>
+<p><code>target</code> özniteliği şu değerlerden birine sahip olabilir:</p>
+<ul>
+<li><code>_self</code> - Varsayılan. Belgeyi tıklandığı aynı pencere/sekmede açar.</li>
+<li><code>_blank</code> - Belgeyi yeni bir pencere veya sekmede açar.</li>
+<li><code>_parent</code> - Belgeyi üst çerçevede açar.</li>
+<li><code>_top</code> - Belgeyi tarayıcı penceresinin tam gövdesinde açar.</li>
+</ul>
+</li>
+</ul>
+<h2 id="bir-resmi-bağlantı-olarak-kullanma"><a class="header" href="#bir-resmi-bağlantı-olarak-kullanma">Bir Resmi Bağlantı Olarak Kullanma</a></h2>
+<ul>
+<li>
+<p>Bir resmi bağlantı olarak kullanmak için, <code>&lt;img&gt;</code> etiketini <code>&lt;a&gt;</code> etiketinin içine yerleştirin:</p>
+<pre><code class="language-html">&lt;a href="url"&gt;
+  &lt;img src="resim.jpg" alt="Açıklama"&gt;
+&lt;/a&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="bir-e-posta-adresine-bağlantı-verme"><a class="header" href="#bir-e-posta-adresine-bağlantı-verme">Bir E-posta Adresine Bağlantı Verme</a></h2>
+<ul>
+<li>
+<p>Kullanıcının e-posta programını açarak yeni bir e-posta göndermesini sağlamak için <code>href</code> özniteliğine <code>mailto:</code> kullanarak bir bağlantı oluşturun:</p>
+<pre><code class="language-html">&lt;a href="mailto:ornek@mail.com"&gt;E-posta Gönder&lt;/a&gt;
+</code></pre>
+</li>
+</ul>
+<p>Bu eğitim, HTML bağlantıları hakkında temel bilgileri sağlamayı amaçlamaktadır. Bağlantıların farklı türlerini ve nasıl kullanılacağını öğrenmek, web geliştirme sürecinizde kritik bir rol oynar. Her zaman doğru söz dizimini kullanarak ve bağlantılarınızın kullanıcı deneyimini nasıl etkilediğini göz önünde bulundurarak daha etkili ve kullanıcı dostu web sayfaları oluşturabilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-görselleri"><a class="header" href="#html-görselleri">HTML Görselleri</a></h1>
+<ul>
+<li>Görseller, bir web sayfasının tasarımını ve görünümünü iyileştirebilir.</li>
+</ul>
+<h2 id="html-görselleri-söz-dizimi"><a class="header" href="#html-görselleri-söz-dizimi">HTML Görselleri Söz Dizimi</a></h2>
+<ul>
+<li>HTML <code>&lt;img&gt;</code> etiketi, bir web sayfasına görsel yerleştirmek için kullanılır.</li>
+<li>Görseller teknik olarak bir web sayfasına eklenmez; görseller web sayfalarına bağlanır. <code>&lt;img&gt;</code> etiketi, referans verilen görsel için bir yer tutucu oluşturur.</li>
+<li><code>&lt;img&gt;</code> etiketi boştur, yalnızca nitelikleri içerir ve kapanış etiketi yoktur.</li>
+<li><code>&lt;img&gt;</code> etiketinin iki zorunlu niteliği vardır:
+<ul>
+<li>src - Görselin yolunu belirtir</li>
+<li>alt - Görsel için alternatif metin belirtir</li>
+</ul>
+</li>
+</ul>
+<h3 id="src-niteliği"><a class="header" href="#src-niteliği">src Niteliği</a></h3>
+<ul>
+<li>Zorunlu olan <code>src</code> niteliği, görselin yolunu (URL) belirtir.</li>
+<li>Bir görselin genişliğini ve yüksekliğini belirtmek için <code>style</code> niteliğini kullanabilirsiniz.</li>
+</ul>
+<h3 id="alt-niteliği"><a class="header" href="#alt-niteliği">alt Niteliği</a></h3>
+<ul>
+<li>Zorunlu olan <code>alt</code> niteliği, kullanıcının görseli herhangi bir nedenle görüntüleyememesi durumunda (yavaş bağlantı, src niteliğinde hata veya ekran okuyucu kullanılması gibi) alternatif bir metin sağlar.</li>
+<li><code>alt</code> niteliğinin değeri görseli tanımlamalıdır:
+<ul>
+<li>Bir tarayıcı görseli bulamazsa, <code>alt</code> niteliğinin değerini görüntüler.</li>
+</ul>
+</li>
+</ul>
+<p>Bu bilgiler, HTML kullanarak görsellerin nasıl yerleştirileceğini ve uygun niteliklerin nasıl kullanılacağını anlamak için temel bir rehber sunmaktadır. HTML standartları, kullanıcı deneyimini ve erişilebilirliği artırmak için bu niteliklerin doğru kullanımını teşvik etmektedir. Görsellerin web sayfalarına doğru şekilde eklenmesi, hem sayfa yüklenme hızını hem de erişilebilirliği olumlu yönde etkiler.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="assignment"><a class="header" href="#assignment">Assignment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="list-and-tables"><a class="header" href="#list-and-tables">List and Tables</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-favicon"><a class="header" href="#html-favicon">HTML Favicon</a></h1>
+<ul>
+<li>Bir favicon, tarayıcı sekmesinde sayfa başlığının yanında görüntülenen küçük bir resimdir.</li>
+</ul>
+<h2 id="adım-1-html-dosyasını-hazırlama"><a class="header" href="#adım-1-html-dosyasını-hazırlama">Adım 1: HTML Dosyasını Hazırlama</a></h2>
+<p>Öncelikle, favicon'u tanımlayacağımız HTML dosyasını oluşturmamız gerekiyor. İşte temel bir HTML şablonu:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Favicon&lt;/title&gt;
+    &lt;link rel="icon" type="image/jpg" href="img.jpg" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Onur Çatık&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu kod parçasında dikkat edilmesi gereken önemli noktalar:</p>
+<ol>
+<li>DOCTYPE Deklarasyonu: Bu, HTML5 dokümanı olduğunu belirten bir bildiridir.</li>
+<li><code>&lt;html lang="en"&gt;</code>: HTML dilini belirtir. <code>en</code> İngilizce için kullanılır.</li>
+<li>Meta Etiketleri: Karakter seti (<code>charset="UTF-8"</code>) ve görüntüleme özelliklerini (<code>viewport</code>) belirler.</li>
+<li>Başlık (<code>&lt;title&gt;</code>): Tarayıcı sekmesinde görünecek sayfa başlığını tanımlar.</li>
+<li>Favicon Etiketi (<code>&lt;link rel="icon"&gt;</code>): Favicon dosyasının yolunu ve türünü belirtir.</li>
+</ol>
+<h2 id="adım-2-favicon-dosyasını-eklemek"><a class="header" href="#adım-2-favicon-dosyasını-eklemek">Adım 2: Favicon Dosyasını Eklemek</a></h2>
+<p>Favicon dosyanızı projenizin kök dizinine yerleştirin. Yukarıdaki örnekte, <code>img.jpg</code> dosyasını kullanıyoruz. Favicon dosyanızın uzantısı <code>ico</code>, <code>png</code>, <code>jpg</code>, veya <code>svg</code> olabilir.</p>
+<h2 id="favicon-türleri-ve-tarayıcı-uyumluluğu"><a class="header" href="#favicon-türleri-ve-tarayıcı-uyumluluğu">Favicon Türleri ve Tarayıcı Uyumluluğu</a></h2>
+<p>Farklı tarayıcılar farklı favicon türlerini destekleyebilir. Genellikle <code>.ico</code> dosya türü en yaygın olarak kabul edilir, ancak modern tarayıcılar <code>png</code>, <code>jpg</code>, ve <code>svg</code> türlerini de desteklemektedir. İşte çeşitli favicon türlerinin nasıl ekleneceği:</p>
+<pre><code class="language-html">&lt;!-- ICO formatı --&gt;
+&lt;link rel="icon" type="image/x-icon" href="favicon.ico" /&gt;
+
+&lt;!-- PNG formatı --&gt;
+&lt;link rel="icon" type="image/png" href="favicon.png" /&gt;
+
+&lt;!-- SVG formatı --&gt;
+&lt;link rel="icon" type="image/svg+xml" href="favicon.svg" /&gt;
+</code></pre>
+<h2 id="favicon-dosyasının-optimizasyonu"><a class="header" href="#favicon-dosyasının-optimizasyonu">Favicon Dosyasının Optimizasyonu</a></h2>
+<p>Favicon dosyanızın boyutunu optimize etmek, web sitenizin yükleme süresini azaltmak için önemlidir. Genellikle, favicon boyutları 16x16 piksel veya 32x32 piksel olur.</p>
+<h2 id="test-etme-ve-sonuç"><a class="header" href="#test-etme-ve-sonuç">Test Etme ve Sonuç</a></h2>
+<ul>
+<li>HTML dosyanızı kaydedin ve bir tarayıcıda açarak favicon'un doğru şekilde görüntülendiğinden emin olun.</li>
+<li>Tarayıcınızda sayfa başlığının yanında küçük bir resim olarak favicon'unuzu görebilmelisiniz.</li>
+<li>Bu adımları izleyerek web sitenize başarılı bir şekilde favicon ekleyebilirsiniz.</li>
+<li>Faviconlar, kullanıcı deneyimini iyileştirir ve sitenizin tanınabilirliğini artırır.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-tabloları"><a class="header" href="#html-tabloları">HTML Tabloları</a></h1>
+<p>HTML tabloları, web geliştiricilerin verileri satırlar ve sütunlar halinde düzenlemelerine olanak tanır.</p>
+<h2 id="html-tablosunu-tanımlama"><a class="header" href="#html-tablosunu-tanımlama">HTML Tablosunu Tanımlama</a></h2>
+<ul>
+<li>HTML'de bir tablo, satırlar ve sütunlar içindeki tablo hücrelerinden oluşur.</li>
+</ul>
+<h2 id="tablo-hücreleri"><a class="header" href="#tablo-hücreleri">Tablo Hücreleri</a></h2>
+<ul>
+<li>Her tablo hücresi, <code>&lt;td&gt;</code> ve <code>&lt;/td&gt;</code> etiketi ile tanımlanır.</li>
+<li><code>td</code> tablo verisi anlamına gelir.</li>
+<li><code>&lt;td&gt;</code> ve <code>&lt;/td&gt;</code> etiketleri arasındaki her şey, tablo hücresinin içeriğidir.</li>
+</ul>
+<h2 id="tablo-satırları"><a class="header" href="#tablo-satırları">Tablo Satırları</a></h2>
+<ul>
+<li>Her tablo satırı <code>&lt;tr&gt;</code> etiketi ile başlar ve <code>&lt;/tr&gt;</code> etiketi ile sona erer.</li>
+<li><code>tr</code>, tablo satırı anlamına gelir.</li>
+</ul>
+<h2 id="tablo-başlıkları"><a class="header" href="#tablo-başlıkları">Tablo Başlıkları</a></h2>
+<ul>
+<li>Bazen hücrelerin tablo başlığı hücreleri olmasını istersiniz. Bu durumlarda <code>&lt;td&gt;</code> etiketi yerine <code>&lt;th&gt;</code> etiketini kullanın:</li>
+<li><code>th</code>, tablo başlığı anlamına gelir.</li>
+</ul>
+<h3 id="Örnek-kod"><a class="header" href="#Örnek-kod">Örnek Kod</a></h3>
+<p>Aşağıda basit bir HTML tablosu örneği bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;style&gt;
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+    &lt;h2&gt;HTML tablosu&lt;/h2&gt;
+
+    &lt;table style="width: 100%"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Sl No:&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Casey&lt;/td&gt;
+            &lt;td&gt;Fred&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Ronald&lt;/td&gt;
+            &lt;td&gt;Franklin&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="açıklama"><a class="header" href="#açıklama">Açıklama</a></h3>
+<p>Yukarıdaki örnek, temel bir HTML tablosunu göstermektedir. İşte adım adım açıklaması:</p>
+<ol>
+<li>
+<p>HTML Belgesi Yapısı: <code>&lt;!DOCTYPE html&gt;</code> etiketi, belge türünü belirtir ve belgenin HTML5 ile uyumlu olduğunu gösterir.</p>
+</li>
+<li>
+<p>Stil Etiketi: <code>&lt;style&gt;</code> etiketi içinde, tablo (<code>table</code>), başlık hücresi (<code>th</code>) ve veri hücresi (<code>td</code>) için bir kenarlık (<code>border</code>) tanımlanmıştır. Kenarlık, siyah renkte ve 1 piksel genişliğindedir.</p>
+</li>
+<li>
+<p>Gövde Etiketi: <code>&lt;body&gt;</code> etiketi, belgenin ana içeriğini içerir.</p>
+</li>
+<li>
+<p>Başlık: <code>&lt;h2&gt;</code> etiketi, "HTML tablosu" başlığını oluşturur.</p>
+</li>
+<li>
+<p>Tablo: <code>&lt;table&gt;</code> etiketi, tablonun başlangıcını ve <code>&lt;table&gt;</code> etiketinin sonunu belirtir. Tablonun genişliği <code>%100</code> olarak ayarlanmıştır.</p>
+</li>
+<li>
+<p>Tablo Satırları ve Hücreleri:</p>
+<ul>
+<li>İlk satır (<code>&lt;tr&gt;</code>), tablo başlık hücrelerini (<code>&lt;th&gt;</code>) içerir: "Sl No:", "First Name", "Last Name".</li>
+<li>İkinci satır, veri hücrelerini (<code>&lt;td&gt;</code>) içerir: "1", "Casey", "Fred".</li>
+<li>Üçüncü satır, başka bir veri satırını içerir: "2", "Ronald", "Franklin".</li>
+</ul>
+</li>
+</ol>
+<h3 id="sonuç-2"><a class="header" href="#sonuç-2">Sonuç</a></h3>
+<p>Bu örnek, HTML tablolarının temel yapı taşlarını ve nasıl oluşturulacaklarını göstermektedir. Daha karmaşık tablolar için ek stil ve özellikler eklenebilir, ancak temel yapı her zaman aynı kalacaktır: <code>table</code>, <code>tr</code>, <code>th</code> ve <code>td</code> etiketleri.</p>
+<p>Tablolar, web geliştirmede verileri düzenli ve okunabilir bir formatta sunmanın temel yöntemlerinden biridir. Tablolarla çalışırken, semantik HTML kullanmak ve stil bilgilerini ayırmak, bakım ve erişilebilirlik açısından en iyi uygulamalar arasında yer alır.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-listeleri"><a class="header" href="#html-listeleri">HTML Listeleri</a></h1>
+<p>HTML listeleri, web geliştiricilerin ilgili öğeleri listeler halinde gruplandırmalarını sağlar.</p>
+<h2 id="sırasız-html-listesi"><a class="header" href="#sırasız-html-listesi">Sırasız HTML Listesi</a></h2>
+<ul>
+<li>Sırasız bir liste, <code>&lt;ul&gt;</code> etiketi ile başlar. Her liste öğesi <code>&lt;li&gt;</code> etiketi ile başlar.</li>
+<li>Liste öğeleri varsayılan olarak küçük siyah dairelerle işaretlenir:</li>
+</ul>
+<h3 id="Örnek"><a class="header" href="#Örnek">Örnek</a></h3>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Öğe 1&lt;/li&gt;
+  &lt;li&gt;Öğe 2&lt;/li&gt;
+  &lt;li&gt;Öğe 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Bu kod, sırasız bir liste oluşturur ve her öğe bir madde işaretiyle gösterilir.</p>
+<h2 id="sıralı-html-listesi"><a class="header" href="#sıralı-html-listesi">Sıralı HTML Listesi</a></h2>
+<ul>
+<li>Sıralı bir liste, <code>&lt;ol&gt;</code> etiketi ile başlar. Her liste öğesi <code>&lt;li&gt;</code> etiketi ile başlar.</li>
+<li>Liste öğeleri varsayılan olarak numaralarla işaretlenir:</li>
+</ul>
+<h3 id="Örnek-1"><a class="header" href="#Örnek-1">Örnek</a></h3>
+<pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;Öğe 1&lt;/li&gt;
+  &lt;li&gt;Öğe 2&lt;/li&gt;
+  &lt;li&gt;Öğe 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>Bu kod, sıralı bir liste oluşturur ve her öğe bir numara ile gösterilir.</p>
+<h2 id="html-tanım-listeleri"><a class="header" href="#html-tanım-listeleri">HTML Tanım Listeleri</a></h2>
+<ul>
+<li>HTML ayrıca tanım listelerini de destekler.</li>
+<li>Bir tanım listesi, terimlerin ve her terimin açıklamasının bulunduğu bir listedir.</li>
+<li><code>&lt;dl&gt;</code> etiketi tanım listesini tanımlar, <code>&lt;dt&gt;</code> etiketi terimi (adı) tanımlar ve <code>&lt;dd&gt;</code> etiketi her terimi açıklar:</li>
+</ul>
+<h3 id="Örnek-2"><a class="header" href="#Örnek-2">Örnek</a></h3>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language: Web sayfaları oluşturmak için kullanılan standart dildir.&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets: Web sayfalarının görünümünü düzenlemek için kullanılan stil dilidir.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<p>Bu kod, bir tanım listesi oluşturur. Her terim <code>&lt;dt&gt;</code> etiketi ile belirtilir ve terimin açıklaması <code>&lt;dd&gt;</code> etiketi ile verilir. Bu tür listeler, terimlerin ve açıklamaların düzgün bir şekilde yapılandırılmasını sağlar.</p>
+<h3 id="Önemli-noktalar"><a class="header" href="#Önemli-noktalar">Önemli Noktalar</a></h3>
+<ol>
+<li>Kapsamlı Anlaşılır Kodlama: Kodların anlaşılabilir ve doğru bir şekilde yazılması, HTML belgelerinin düzgün çalışmasını sağlar.</li>
+<li>Etiketlerin Doğru Kullanımı: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, ve <code>&lt;dd&gt;</code> etiketlerinin doğru ve yerinde kullanımı, belgelerin yapısal bütünlüğünü korur.</li>
+<li>Semantik Web: Listelerin ve diğer HTML etiketlerinin doğru kullanımı, web sayfalarının semantik yapısını güçlendirir ve erişilebilirliğini artırır.</li>
+</ol>
+<p>Bu bilgiler, HTML listelerini kullanırken dikkat edilmesi gereken temel noktaları kapsamaktadır. Geliştiriciler, bu kuralları takip ederek daha okunabilir, anlaşılır ve işlevsel web sayfaları oluşturabilirler.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-blok-ve-satır-İçi-elemanlar"><a class="header" href="#html-blok-ve-satır-İçi-elemanlar">HTML Blok ve Satır İçi Elemanlar</a></h1>
+<h2 id="blok-düzeyindeki-elemanlar"><a class="header" href="#blok-düzeyindeki-elemanlar">Blok Düzeyindeki Elemanlar</a></h2>
+<ul>
+<li>Blok düzeyindeki bir eleman her zaman yeni bir satırda başlar ve tarayıcılar otomatik olarak elemandan önce ve sonra biraz boşluk (margin) ekler.</li>
+<li>Blok düzeyindeki bir eleman her zaman mevcut olan tüm genişliği kaplar (mümkün olduğunca sola ve sağa uzanır).</li>
+</ul>
+<p>➪ İki yaygın kullanılan blok elemanı: <code>&lt;p&gt;</code> ve <code>&lt;div&gt;</code> elemanlarıdır.</p>
+<ul>
+<li><code>&lt;p&gt;</code> elemanı, bir HTML belgesinde bir paragrafı tanımlar.</li>
+<li><code>&lt;div&gt;</code> elemanı, bir HTML belgesinde bir bölümü veya kısmı tanımlar.</li>
+</ul>
+<h2 id="satır-İçi-elemanlar"><a class="header" href="#satır-İçi-elemanlar">Satır İçi Elemanlar</a></h2>
+<ul>
+<li>Satır içi bir eleman yeni bir satırda başlamaz.</li>
+<li>Satır içi bir eleman sadece gerektiği kadar genişlik kaplar.</li>
+<li>Bu, bir paragraf içinde <span> elemanıdır.</li>
+</ul>
+<h3 id="kritik-değerlendirme-ve-teknik-İnceleme"><a class="header" href="#kritik-değerlendirme-ve-teknik-İnceleme">Kritik Değerlendirme ve Teknik İnceleme</a></h3>
+<p>Blok ve satır içi elemanların HTML doküman yapısında oynadıkları rolü anlamak, etkili web tasarımı ve geliştirmesi için çok önemlidir. Blok düzeyindeki elemanların genişlik kaplama davranışları ve satır içi elemanların sadece gerekli olan alanı kaplamaları, sayfa düzeni ve kullanıcı deneyimini doğrudan etkiler. Bu nedenle, bu elemanların doğru ve yerinde kullanımı, profesyonel web geliştirme standartlarına uyulmasını sağlar.</p>
+<h4 id="blok-düzeyindeki-elemanlar-1"><a class="header" href="#blok-düzeyindeki-elemanlar-1">Blok Düzeyindeki Elemanlar</a></h4>
+<p>Blok elemanların yeni bir satırda başlaması ve tam genişlik kaplama özellikleri, sayfa düzenini ve içerik akışını kontrol etmek için kullanılır. Bu elemanlar, genellikle ana yapısal bileşenler olarak kullanılır ve stil vermek için CSS ile kolayca hedeflenebilir.</p>
+<p>Örneğin:</p>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;p&gt;Bu bir paragraf.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Yukarıdaki örnekte, <code>&lt;div&gt;</code> elemanı bir bölüm oluşturur ve içindeki <code>&lt;p&gt;</code> elemanı bir paragraf tanımlar. Tarayıcı, her iki elemanı da yeni satırlarda gösterir ve uygun marjları ekler.</p>
+<h4 id="satır-İçi-elemanlar-1"><a class="header" href="#satır-İçi-elemanlar-1">Satır İçi Elemanlar</a></h4>
+<p>Satır içi elemanlar, metin veya diğer içeriklerle aynı satırda gösterilmek üzere tasarlanmıştır. Bu elemanlar, belirli metin parçalarını stilize etmek veya vurgulamak için kullanılır.</p>
+<p>Örneğin:</p>
+<pre><code class="language-html">&lt;p&gt;Bu, bir &lt;span&gt;vurgulanmış&lt;/span&gt; kelimedir.&lt;/p&gt;
+</code></pre>
+<p>Bu örnekte, <code>&lt;span&gt;</code> elemanı, belirli bir metin parçasını vurgulamak için kullanılır ve bu metin parçası ile aynı satırda kalır.</p>
+<h3 id="teknik-doğruluk-ve-tavsiyeler"><a class="header" href="#teknik-doğruluk-ve-tavsiyeler">Teknik Doğruluk ve Tavsiyeler</a></h3>
+<p>HTML dokümanlarında blok ve satır içi elemanları kullanırken dikkat edilmesi gereken bazı önemli noktalar vardır:</p>
+<ol>
+<li>
+<p>Doğru Eleman Seçimi: İçeriğin anlamını doğru bir şekilde ifade etmek için uygun elemanlar kullanılmalıdır. Blok elemanlar yapısal içerik için, satır içi elemanlar ise içerik vurgulaması için kullanılmalıdır.</p>
+</li>
+<li>
+<p>Stil ve Düzen: CSS kullanarak blok ve satır içi elemanların stil ve düzenini kontrol etmek, kullanıcı deneyimini iyileştirir. Bu, sayfa düzeni, renkler, yazı tipleri ve boşluklar gibi görsel unsurları içerir.</p>
+</li>
+<li>
+<p>Erişilebilirlik: Doğru HTML yapısı, erişilebilirlik standartlarına uygun olmalıdır. Bu, ekran okuyucular ve diğer yardımcı teknolojilerle uyumlu olmak için önemlidir.</p>
+</li>
+</ol>
+<p>Sonuç olarak, HTML'de blok ve satır içi elemanların kullanımı, etkili ve erişilebilir web sayfaları oluşturmak için temel bir beceridir. Bu elemanların doğru kullanımı, hem geliştiriciler hem de kullanıcılar için daha iyi bir deneyim sağlar.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assignment-1"><a class="header" href="#assignment-1">Assignment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="form"><a class="header" href="#form">Form</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="html-iframeler"><a class="header" href="#html-iframeler">HTML Iframe'ler</a></h2>
+<p>Bir HTML iframe, bir web sayfasını başka bir web sayfası içinde görüntülemek için kullanılır.</p>
+<h3 id="html-iframe-sözdizimi"><a class="header" href="#html-iframe-sözdizimi">HTML Iframe Sözdizimi</a></h3>
+<ul>
+<li>HTML <code>&lt;iframe&gt;</code> etiketi, mevcut HTML belgesi içinde başka bir belge yerleştirmek için kullanılır.</li>
+</ul>
+<h3 id="iframe---yükseklik-ve-genişlik-ayarlama"><a class="header" href="#iframe---yükseklik-ve-genişlik-ayarlama">Iframe - Yükseklik ve Genişlik Ayarlama</a></h3>
+<ul>
+<li>Iframe'in boyutunu belirtmek için <code>height</code> ve <code>width</code> özniteliklerini kullanın.</li>
+<li>Yükseklik ve genişlik varsayılan olarak piksel cinsindendir:</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h2&gt;HTML Iframe&lt;/h2&gt;
+&lt;iframe 
+    src="https://google.com" 
+    height="300" 
+    width="340" 
+    title="Iframe Example"&gt;
+&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="detaylı-açıklama-ve-düzeltmeler"><a class="header" href="#detaylı-açıklama-ve-düzeltmeler">Detaylı Açıklama ve Düzeltmeler</a></h3>
+<p>Bir iframe kullanarak başka bir web sayfasını kendi web sayfanızda görüntüleyebilirsiniz. Bu, özellikle harici içerikleri entegre etmek için faydalıdır. Örneğin, bir harita, bir video veya başka bir web sayfasının belirli bir bölümü iframe kullanılarak gömülebilir.</p>
+<p>Yukarıdaki örnekte, bir iframe oluşturulmuş ve <code>src</code> özniteliği ile Google'ın ana sayfası iframe içine yerleştirilmiştir. Burada dikkat edilmesi gereken önemli noktalar vardır:</p>
+<ol>
+<li>Güvenlik ve İçerik Politikaları: Tüm web siteleri iframe içinde görüntülenmeye izin vermez. Güvenlik politikaları nedeniyle bazı siteler iframe kullanılarak gömülemez. Bu durumda tarayıcılar içerik politikasına bağlı olarak bu içeriği engelleyebilir.</li>
+<li>Boyutlandırma: Iframe'in boyutu, <code>height</code> ve <code>width</code> öznitelikleri kullanılarak ayarlanır. Bu özniteliklerin değerleri varsayılan olarak piksel (px) cinsindendir. Örneğin, yukarıdaki örnekte iframe'in yüksekliği 300 piksel, genişliği ise 340 piksel olarak ayarlanmıştır.</li>
+<li>Erişilebilirlik: Iframe'ler erişilebilirlik açısından uygun şekilde kullanılmalıdır. <code>title</code> özniteliği, iframe içeriğinin ne olduğunu açıklayan bir bilgi sağlar ve ekran okuyucular tarafından kullanılabilir.</li>
+<li>Yanıt Verme: Mobil cihazlar ve farklı ekran boyutlarına uyum sağlamak için iframe boyutlandırmasını duyarlı (responsive) hale getirmek önemlidir. CSS kullanarak iframe'in genişlik ve yüksekliğini esnek hale getirebilirsiniz.</li>
+</ol>
+<h3 id="Örnek-3"><a class="header" href="#Örnek-3">Örnek</a></h3>
+<p>Aşağıda, duyarlı bir iframe oluşturmak için CSS ile birlikte nasıl kullanabileceğinize dair bir örnek bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.responsive-iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Responsive HTML Iframe&lt;/h2&gt;
+&lt;div class="responsive-iframe"&gt;
+    &lt;iframe 
+        src="https://google.com" 
+        title="Iframe Example"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>Bu örnekte, iframe duyarlı hale getirilmiştir ve ekran boyutuna göre boyutları otomatik olarak ayarlanır.</li>
+<li>CSS <code>padding-top</code> hilesi, iframe'in en-boy oranını korumak için kullanılmıştır.</li>
+<li>İframe'ler web sayfalarında güçlü araçlar olabilir, ancak dikkatli ve bilinçli bir şekilde kullanılmaları önemlidir.</li>
+<li>Güvenlik, erişilebilirlik ve kullanıcı deneyimi açısından iyi uygulamalara uymak gereklidir.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-multimedya"><a class="header" href="#html-multimedya">HTML Multimedya</a></h1>
+<p>Web'deki multimedya, ses, müzik, videolar, filmler ve animasyonlardan oluşur.</p>
+<h2 id="html-video-elemanı"><a class="header" href="#html-video-elemanı">HTML <code>&lt;video&gt;</code> Elemanı</a></h2>
+<ul>
+<li>HTML <code>&lt;video&gt;</code> elemanı, bir web sayfasında video göstermek için kullanılır.</li>
+<li>HTML'de video göstermek için <code>&lt;video&gt;</code> elemanını kullanın:</li>
+</ul>
+<h3 id="ortak-video-formatları"><a class="header" href="#ortak-video-formatları">Ortak Video Formatları</a></h3>
+<ul>
+<li>Birçok video formatı mevcuttur.</li>
+<li>HTML tarafından desteklenen formatlar MP4, WebM ve Ogg'dur.</li>
+<li>YouTube tarafından önerilen format MP4'tür.</li>
+</ul>
+<h2 id="html-audio-elemanı"><a class="header" href="#html-audio-elemanı">HTML <code>&lt;audio&gt;</code> Elemanı</a></h2>
+<ul>
+<li>HTML'de bir ses dosyası çalmak için <code>&lt;audio&gt;</code> elemanını kullanın.</li>
+<li>HTML <code>&lt;audio&gt;</code> elemanı, bir web sayfasında ses dosyası çalmak için kullanılır.</li>
+</ul>
+<h3 id="ortak-ses-formatları"><a class="header" href="#ortak-ses-formatları">Ortak Ses Formatları</a></h3>
+<ul>
+<li>MP3, sıkıştırılmış kaydedilmiş müzik için en iyi formattır. MP3 terimi dijital müzikle eş anlamlı hale gelmiştir.</li>
+<li>Web siteniz kaydedilmiş müzikle ilgiliyse, MP3 formatını tercih edin.</li>
+</ul>
+<h2 id="html-youtube-videoları"><a class="header" href="#html-youtube-videoları">HTML YouTube Videoları</a></h2>
+<ul>
+<li>HTML'de video oynatmanın en kolay yolu YouTube'u kullanmaktır.</li>
+</ul>
+<h2 id="htmlde-youtube-videosu-oynatma"><a class="header" href="#htmlde-youtube-videosu-oynatma">HTML'de YouTube Videosu Oynatma</a></h2>
+<p>➪ Videonuzu bir web sayfasında oynatmak için şunları yapın:</p>
+<ol>
+<li>Videoyu YouTube'a yükleyin.</li>
+<li>Video kimliğini not edin.</li>
+<li>Web sayfanızda bir <code>&lt;iframe&gt;</code> elemanı tanımlayın.</li>
+<li><code>src</code> özniteliğini video URL'sine yönlendirin.</li>
+<li>Oynatıcının boyutlarını belirtmek için <code>width</code> ve <code>height</code> özniteliklerini kullanın.</li>
+</ol>
+<h3 id="htmlde-video-göstermek-İçin-video-elemanı-kullanımı"><a class="header" href="#htmlde-video-göstermek-İçin-video-elemanı-kullanımı">HTML'de Video Göstermek İçin <code>&lt;video&gt;</code> Elemanı Kullanımı</a></h3>
+<p>HTML'de bir video göstermek için aşağıdaki örneği inceleyebilirsiniz:</p>
+<pre><code class="language-html">&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.ogg" type="video/ogg"&gt;
+  Tarayıcınız video elementini desteklemiyor.
+&lt;/video&gt;
+</code></pre>
+<h3 id="htmlde-ses-dosyası-Çalmak-İçin-audio-elemanı-kullanımı"><a class="header" href="#htmlde-ses-dosyası-Çalmak-İçin-audio-elemanı-kullanımı">HTML'de Ses Dosyası Çalmak İçin <code>&lt;audio&gt;</code> Elemanı Kullanımı</a></h3>
+<p>Bir ses dosyasını çalmak için aşağıdaki örneği kullanabilirsiniz:</p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
+  Tarayıcınız audio elementini desteklemiyor.
+&lt;/audio&gt;
+</code></pre>
+<h3 id="youtube-videolarını-htmlde-gömme"><a class="header" href="#youtube-videolarını-htmlde-gömme">YouTube Videolarını HTML'de Gömme</a></h3>
+<p>YouTube videolarını HTML'de gömmek için aşağıdaki örneği takip edin:</p>
+<pre><code class="language-html">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+<p>Bu yöntemlerle, HTML kullanarak web sayfalarınıza multimedya öğeleri ekleyebilir ve ziyaretçilerinize zengin içerikler sunabilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-formlar"><a class="header" href="#html-formlar">HTML Formlar</a></h1>
+<h2 id="input-elemanı"><a class="header" href="#input-elemanı"><code>&lt;input&gt;</code> Elemanı</a></h2>
+<ul>
+<li>HTML <code>&lt;input&gt;</code> elemanı, en çok kullanılan form elemanıdır.</li>
+<li><code>&lt;input&gt;</code> elemanı, <code>type</code> özniteliğine bağlı olarak birçok şekilde görüntülenebilir.</li>
+<li>İşte bazı örnekler:</li>
+</ul>
+<h1 id="html-form"><a class="header" href="#html-form">HTML Form</a></h1>
+<ul>
+<li>HTML formu, kullanıcı girdisi toplamak için kullanılır. Kullanıcı girdisi genellikle işlenmek üzere bir sunucuya gönderilir.</li>
+</ul>
+<h1 id="konu-3---html-formlar"><a class="header" href="#konu-3---html-formlar">Konu 3 - HTML Formlar</a></h1>
+<h2 id="input-elemanı-1"><a class="header" href="#input-elemanı-1"><code>&lt;input&gt;</code> Elemanı</a></h2>
+<ul>
+<li>HTML <code>&lt;input&gt;</code> elemanı, en çok kullanılan form elemanıdır.</li>
+<li><code>&lt;input&gt;</code> elemanı, <code>type</code> özniteliğine bağlı olarak birçok şekilde görüntülenebilir.</li>
+<li>İşte bazı örnekler:</li>
+</ul>
+<h3 id="input-elemanı-türleri"><a class="header" href="#input-elemanı-türleri"><code>&lt;input&gt;</code> Elemanı Türleri</a></h3>
+<h4 id="1-metin-girişi-typetext"><a class="header" href="#1-metin-girişi-typetext">1. Metin Girişi (<code>type="text"</code>)</a></h4>
+<pre><code class="language-html">&lt;input type="text" name="isim" placeholder="Adınızı girin"&gt;
+</code></pre>
+<ul>
+<li>Bu tür, kullanıcıdan metin girişi almak için kullanılır.</li>
+<li><code>placeholder</code> özniteliği, kullanıcıya ne tür bilgi girmesi gerektiğini belirtir.</li>
+</ul>
+<h4 id="2-Şifre-girişi-typepassword"><a class="header" href="#2-Şifre-girişi-typepassword">2. Şifre Girişi (<code>type="password"</code>)</a></h4>
+<pre><code class="language-html">&lt;input type="password" name="sifre" placeholder="Şifrenizi girin"&gt;
+</code></pre>
+<ul>
+<li>Bu tür, kullanıcıdan şifre girişi almak için kullanılır.</li>
+<li>Girilen metin, gizlilik amacıyla yıldız (*) veya nokta (•) ile maskelenir.</li>
+</ul>
+<h4 id="3-e-posta-girişi-typeemail"><a class="header" href="#3-e-posta-girişi-typeemail">3. E-posta Girişi (<code>type="email"</code>)</a></h4>
+<pre><code class="language-html">&lt;input type="email" name="email" placeholder="E-posta adresinizi girin"&gt;
+</code></pre>
+<ul>
+<li>Bu tür, kullanıcıdan e-posta adresi girişi almak için kullanılır.</li>
+<li>Tarayıcı, e-posta formatını doğrular.</li>
+</ul>
+<h4 id="4-sayı-girişi-typenumber"><a class="header" href="#4-sayı-girişi-typenumber">4. Sayı Girişi (<code>type="number"</code>)</a></h4>
+<pre><code class="language-html">&lt;input type="number" name="yas" min="0" max="100"&gt;
+</code></pre>
+<ul>
+<li>Bu tür, kullanıcıdan sayı girişi almak için kullanılır.</li>
+<li><code>min</code> ve <code>max</code> öznitelikleri, girilebilecek sayı aralığını belirler.</li>
+</ul>
+<h4 id="5-tarih-girişi-typedate"><a class="header" href="#5-tarih-girişi-typedate">5. Tarih Girişi (<code>type="date"</code>)</a></h4>
+<pre><code class="language-html">&lt;input type="date" name="dogumTarihi"&gt;
+</code></pre>
+<ul>
+<li>Bu tür, kullanıcıdan tarih girişi almak için kullanılır.</li>
+<li>Kullanıcıya takvim arayüzü sunulur.</li>
+</ul>
+<h2 id="html-formu"><a class="header" href="#html-formu">HTML Formu</a></h2>
+<p>Bir HTML formu, kullanıcı girdisi toplamak için kullanılır. Kullanıcı girdisi, genellikle işlenmek üzere bir sunucuya gönderilir. Bir form oluşturmak için <code>&lt;form&gt;</code> etiketi kullanılır. İşte bir örnek:</p>
+<pre><code class="language-html">&lt;form action="/submit" method="post"&gt;
+  &lt;label for="isim"&gt;İsim:&lt;/label&gt;
+  &lt;input type="text" id="isim" name="isim"&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="sifre"&gt;Şifre:&lt;/label&gt;
+  &lt;input type="password" id="sifre" name="sifre"&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="email"&gt;E-posta:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="yas"&gt;Yaş:&lt;/label&gt;
+  &lt;input type="number" id="yas" name="yas" min="0" max="100"&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="dogumTarihi"&gt;Doğum Tarihi:&lt;/label&gt;
+  &lt;input type="date" id="dogumTarihi" name="dogumTarihi"&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;input type="submit" value="Gönder"&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="form-elemanları-açıklamaları"><a class="header" href="#form-elemanları-açıklamaları">Form Elemanları Açıklamaları</a></h3>
+<ul>
+<li><code>&lt;form&gt;</code>: Formu tanımlar.</li>
+<li><code>action</code>: Form verilerinin gönderileceği URL'yi belirtir.</li>
+<li><code>method</code>: Form verilerinin gönderilme yöntemini belirtir (örn. <code>get</code> veya <code>post</code>).</li>
+<li><code>&lt;label&gt;</code>: Form elemanları için etiket sağlar ve erişilebilirliği artırır.</li>
+<li><code>&lt;input&gt;</code>: Kullanıcıdan bilgi almak için kullanılan çeşitli türlerde giriş elemanlarını temsil eder.</li>
+<li><code>&lt;input type="submit"&gt;</code>: Form verilerini göndermek için kullanılan butonu temsil eder.</li>
+</ul>
+<h2 id="bilimsel-ve-teknik-değerlendirme"><a class="header" href="#bilimsel-ve-teknik-değerlendirme">Bilimsel ve Teknik Değerlendirme</a></h2>
+<p>HTML formlarının kullanımı, web geliştirme sürecinde temel bir beceridir. Formlar, kullanıcıdan veri toplamak ve bu verileri sunucuya iletmek için önemli bir araçtır. <code>&lt;input&gt;</code> elemanının çeşitli türleri, farklı veri tipleri için uygun giriş yöntemleri sunar. Bu, kullanıcı deneyimini iyileştirir ve verilerin doğru formatta alınmasını sağlar.</p>
+<p>Önemli olan, her giriş türünün amacına uygun olarak kullanılmasıdır. Örneğin, bir şifre girişi için <code>type="password"</code> kullanmak, güvenliği artırır ve kullanıcı gizliliğini korur. E-posta girişi için <code>type="email"</code> kullanmak ise, girilen verinin geçerliliğini tarayıcı düzeyinde kontrol eder ve hatalı girişleri azaltır.</p>
+<p>Sonuç olarak, HTML formlarını doğru ve etkili bir şekilde kullanmak, hem kullanıcı deneyimini hem de veri doğruluğunu artırır. Bu nedenle, her form elemanının özelliklerini ve kullanım alanlarını iyi anlamak, profesyonel web geliştirme için kritik öneme sahiptir.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-canvas"><a class="header" href="#html-canvas">HTML Canvas</a></h1>
+<h2 id="html-canvas-nedir"><a class="header" href="#html-canvas-nedir">HTML Canvas Nedir?</a></h2>
+<ul>
+<li>HTML <code>&lt;canvas&gt;</code> öğesi, grafiklerin JavaScript ile dinamik olarak çizilmesi için kullanılır.</li>
+<li><code>&lt;canvas&gt;</code> öğesi yalnızca grafikler için bir konteynerdir. Grafikleri gerçekten çizmek için JavaScript kullanmanız gerekir.</li>
+<li>Canvas, yollar, kutular, daireler, metinler çizmek ve görüntüler eklemek için çeşitli yöntemlere sahiptir.</li>
+<li>Canvas, bir HTML sayfasında dikdörtgen bir alandır. Varsayılan olarak, bir canvas'ın sınırı ve içeriği yoktur.</li>
+<li>İşaretleme (markup) şu şekilde görünür:</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+      Tarayıcınız HTML canvas etiketini desteklemiyor.
+    &lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki HTML kodu, "myCanvas" kimliği verilen 200 piksel genişliğinde ve 100 piksel yüksekliğinde bir <code>&lt;canvas&gt;</code> öğesi tanımlar. Bu canvas'ın sınırları, 1 piksel genişliğinde siyah bir çizgi ile belirlenmiştir. Eğer tarayıcı canvas etiketini desteklemiyorsa, "Tarayıcınız HTML canvas etiketini desteklemiyor." mesajı görüntülenecektir.</p>
+<h3 id="javascript-ile-Çizim"><a class="header" href="#javascript-ile-Çizim">JavaScript ile Çizim</a></h3>
+<p>Canvas'a çizim yapmak için JavaScript kullanmamız gerekir. Aşağıdaki örnek, canvas'a bir dikdörtgen çizmeyi gösterir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+      Tarayıcınız HTML canvas etiketini desteklemiyor.
+    &lt;/canvas&gt;
+
+    &lt;script&gt;
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu JavaScript kodu, "myCanvas" kimliği ile tanımlanan canvas'ı seçer ve 2D çizim bağlamını (<code>getContext("2d")</code>) alır. <code>fillStyle</code> özelliği ile dolgu rengini kırmızıya (<code>#FF0000</code>) ayarlar ve <code>fillRect</code> yöntemi ile (0, 0) koordinatlarından başlayarak 150 piksel genişliğinde ve 75 piksel yüksekliğinde bir dikdörtgen çizer.</p>
+<h3 id="Çeşitli-Çizim-yöntemleri"><a class="header" href="#Çeşitli-Çizim-yöntemleri">Çeşitli Çizim Yöntemleri</a></h3>
+<p>Canvas API, çeşitli grafik türleri oluşturmak için birçok yöntem sunar. Örneğin:</p>
+<ul>
+<li><code>fillRect(x, y, width, height)</code>: Dolgu ile bir dikdörtgen çizer.</li>
+<li><code>strokeRect(x, y, width, height)</code>: Çerçeve ile bir dikdörtgen çizer.</li>
+<li><code>clearRect(x, y, width, height)</code>: Belirtilen dikdörtgen alanı temizler.</li>
+<li><code>beginPath()</code>: Yeni bir yol başlatır.</li>
+<li><code>moveTo(x, y)</code>: Kalemi belirli bir noktaya taşır.</li>
+<li><code>lineTo(x, y)</code>: Belirtilen noktaya bir çizgi çizer.</li>
+<li><code>arc(x, y, radius, startAngle, endAngle, anticlockwise)</code>: Bir yay çizer.</li>
+<li><code>fill()</code>: Geçerli yolu dolgu ile kaplar.</li>
+<li><code>stroke()</code>: Geçerli yolu çerçeve ile çizer.</li>
+</ul>
+<p>Bu yöntemleri kullanarak, karmaşık grafikler ve şekiller oluşturabilirsiniz. Daha fazla bilgi için MDN Web Docs gibi kaynaklara başvurabilirsiniz.</p>
+<h3 id="canvasa-görüntü-eklemek"><a class="header" href="#canvasa-görüntü-eklemek">Canvas'a Görüntü Eklemek</a></h3>
+<p>Canvas'a bir görüntü eklemek de mümkündür. Aşağıdaki örnek, bir görüntüyü nasıl yükleyip canvas'a çizeceğinizi gösterir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+      Tarayıcınız HTML canvas etiketini desteklemiyor.
+    &lt;/canvas&gt;
+
+    &lt;script&gt;
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      var img = new Image();
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+      };
+      img.src = 'path/to/image.jpg';
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu kod, bir görüntü dosyasını (<code>path/to/image.jpg</code>) yükler ve yükleme tamamlandığında, <code>drawImage</code> yöntemi ile canvas'a çizer. <code>onload</code> olayı, görüntünün tamamen yüklendiğini belirttiğinde çizim işlemi gerçekleştirilir.</p>
+<p>Canvas API'nin sunduğu zengin özellik seti, web uygulamalarında dinamik ve etkileşimli grafikler oluşturmanıza olanak tanır. Bu özellikler, sadece temel şekiller ve çizimlerle sınırlı değildir; aynı zamanda oyunlar, veri görselleştirme, animasyonlar ve daha fazlası için güçlü araçlar sunar.</p>
+<h3 id="sonuç-3"><a class="header" href="#sonuç-3">Sonuç</a></h3>
+<p>HTML Canvas, web sayfalarında dinamik grafikler oluşturmak için güçlü bir araçtır. JavaScript ile birlikte kullanıldığında, etkileşimli ve görsel olarak çekici içerikler yaratmanıza imkan tanır. Temel kavramları ve yöntemleri öğrendikten sonra, Canvas ile yapabilecekleriniz sadece hayal gücünüzle sınırlıdır.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-emojileri"><a class="header" href="#html-emojileri">HTML Emojileri</a></h1>
+<h2 id="emojiler-nedir"><a class="header" href="#emojiler-nedir">Emojiler Nedir?</a></h2>
+<ul>
+<li>Emojiler resim veya ikon gibi görünse de, aslında öyle değiller.</li>
+<li>UTF-8 (Unicode) karakter setinin harfleridirler (karakterler).</li>
+<li>Emojiler, UTF-8 karakter setinden gelen karakterlerdir: 😄 😍 💗</li>
+<li>Bu emojileri HTML'de görüntülemek isterseniz, ondalık (dec) veya onaltılık (hex) referansları kullanabilirsiniz.</li>
+</ul>
+<h3 id="htmlde-emoji-kullanımı"><a class="header" href="#htmlde-emoji-kullanımı">HTML'de Emoji Kullanımı</a></h3>
+<p>HTML belgelerinde emojileri kullanmak oldukça basittir. Emojiler, Unicode karakter setinin bir parçasıdır ve herhangi bir HTML belgesinde doğru karakter referansları kullanılarak görüntülenebilirler. İşte adım adım HTML'de emoji kullanımı hakkında detaylı bir açıklama:</p>
+<h4 id="1-html-belgesi-oluşturma"><a class="header" href="#1-html-belgesi-oluşturma">1. HTML Belgesi Oluşturma</a></h4>
+<p>Öncelikle, emojileri içeren bir HTML belgesi oluşturmalısınız. Aşağıda basit bir HTML belgesi örneği verilmiştir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;HTML Emojileri&lt;/h2&gt;
+    😇 😊 😍 😉
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu kod, basit bir HTML belgesini temsil eder ve içinde birkaç emoji karakteri içerir. <code>&amp;#128519;</code>, <code>&amp;#128522;</code>, <code>&amp;#128525;</code> ve <code>&amp;#128521;</code> karakter referansları ile emojiler temsil edilmiştir.</p>
+<h4 id="2-karakter-referansları-kullanma"><a class="header" href="#2-karakter-referansları-kullanma">2. Karakter Referansları Kullanma</a></h4>
+<p>HTML'de emojileri görüntülemek için Unicode karakterlerinin ondalık veya onaltılık referanslarını kullanabilirsiniz. Örneğin:</p>
+<ul>
+<li><code>&amp;#128519;</code> ondalık (decimal) referans kullanır ve bu 😇 emojisini temsil eder.</li>
+<li><code>&amp;#x1F60A;</code> onaltılık (hexadecimal) referans kullanır ve bu 😊 emojisini temsil eder.</li>
+</ul>
+<p>Bu referansları HTML içinde kullanarak istediğiniz emojiyi görüntüleyebilirsiniz. İşte başka bir örnek:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;HTML Emojileri&lt;/h2&gt;
+    😁 &lt;!-- 😀 Gülümseyen yüz --&gt;
+    😉 &lt;!-- 😉 Göz kırpan yüz --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="3-utf-8-karakter-seti"><a class="header" href="#3-utf-8-karakter-seti">3. UTF-8 Karakter Seti</a></h4>
+<p>HTML belgelerinde emojilerin doğru görüntülenebilmesi için belgenin UTF-8 karakter seti ile kodlanması gereklidir. Bu nedenle, HTML belgesinin <code>&lt;head&gt;</code> bölümüne aşağıdaki meta etiketi eklenmelidir:</p>
+<pre><code class="language-html">&lt;meta charset="UTF-8"&gt;
+</code></pre>
+<p>Bu etiket, belgenin UTF-8 karakter seti kullanarak kodlandığını belirtir ve emojilerin doğru bir şekilde görüntülenmesini sağlar.</p>
+<h3 id="sonuç-4"><a class="header" href="#sonuç-4">Sonuç</a></h3>
+<p>Emojiler, HTML belgelerinde kolayca kullanılabilir ve metin içeriğine renk katabilir. Unicode karakter seti sayesinde, herhangi bir emoji, doğru karakter referansları kullanılarak HTML'de görüntülenebilir. Bu basit adımları takip ederek, HTML belgelerinize emojiler ekleyebilir ve kullanıcı deneyimini zenginleştirebilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assignment-2"><a class="header" href="#assignment-2">Assignment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="form-1"><a class="header" href="#form-1">Form</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-anlamsal-Öğeler"><a class="header" href="#html-anlamsal-Öğeler">HTML Anlamsal Öğeler</a></h1>
+<h2 id="anlamsal-Öğeler-Öncesi"><a class="header" href="#anlamsal-Öğeler-Öncesi">Anlamsal Öğeler Öncesi</a></h2>
+<p>HTML Anlamsal Öğeler</p>
+<ul>
+<li>Pek çok web sitesi, gezinme, üstbilgi ve altbilgiyi belirtmek için <div id="nav">, <div class="header">, <div id="footer"> gibi HTML kodları içerir.</li>
+<li>HTML'de, bir web sayfasının farklı bölümlerini tanımlamak için kullanılabilecek bazı anlamsal öğeler vardır:</li>
+<li>HTML'in anlamsal öğeleri, bir web sayfasının yapısını ve anlamını daha açık hale getiren belirli etiketlerdir.</li>
+<li>Anlamsal HTML, tarayıcıların ve geliştiricilerin içeriğin anlamını daha iyi anlamalarını sağlar.</li>
+<li>Bu, hem SEO (Arama Motoru Optimizasyonu) hem de erişilebilirlik açısından önemlidir.</li>
+</ul>
+<p>HTML5 ile birlikte gelen bazı önemli anlamsal öğeler şunlardır:</p>
+<ul>
+<li><code>&lt;header&gt;</code>: Bir belgenin veya bir bölümün üst bilgisini tanımlar. Genellikle başlıklar, logolar, gezinme bağlantıları içerir.</li>
+<li><code>&lt;nav&gt;</code>: Belgedeki bir gezinme bağlantıları kümesini tanımlar.</li>
+<li><code>&lt;section&gt;</code>: Belgedeki tematik içerik bölümlerini tanımlar. Her bölüm genellikle kendi başlığına sahiptir.</li>
+<li><code>&lt;article&gt;</code>: Bağımsız, kendine yeten içerik parçalarını tanımlar. Bir blog yazısı, haber makalesi veya forum gönderisi olabilir.</li>
+<li><code>&lt;aside&gt;</code>: Ana içeriğe dolaylı olarak ilişkili içerik parçalarını tanımlar. Yan bilgiler, yan notlar veya reklamlar içerebilir.</li>
+<li><code>&lt;footer&gt;</code>: Bir belgenin veya bir bölümün alt bilgisini tanımlar. Genellikle yazar bilgileri, yasal bilgiler veya iletişim bilgileri içerir.</li>
+</ul>
+<p>Bu anlamsal öğeler, sayfanın yapısını daha anlamlı hale getirir ve hem insanlar hem de makineler tarafından daha iyi anlaşılmasını sağlar. Örneğin, arama motorları bu öğeleri kullanarak sayfanızın içeriğini daha iyi analiz edebilir ve sıralayabilir.</p>
+<h3 id="anlamsal-olmayan-kodlara-Örnek"><a class="header" href="#anlamsal-olmayan-kodlara-Örnek">Anlamsal Olmayan Kodlara Örnek</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div id="nav"&gt;Gezinme&lt;/div&gt;
+    &lt;div class="header"&gt;Üstbilgi&lt;/div&gt;
+    &lt;div id="footer"&gt;Altbilgi&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="anlamsal-kodlara-Örnek"><a class="header" href="#anlamsal-kodlara-Örnek">Anlamsal Kodlara Örnek</a></h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;header&gt;Üstbilgi&lt;/header&gt;
+    &lt;nav&gt;Gezinme&lt;/nav&gt;
+    &lt;section&gt;
+      &lt;h1&gt;HTML&lt;/h1&gt;
+      &lt;p&gt;HTML, Hyper Text Markup Language'ın kısaltmasıdır. HTML, Web sayfaları oluşturmak için standart biçimlendirme dilidir.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      &lt;h1&gt;CSS&lt;/h1&gt;
+      &lt;p&gt;CSS, belge yazımında HTML veya XML ile kullanılan bir stil sayfası dilidir.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;footer&gt;Altbilgi&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>Yukarıdaki örnekte, anlamsal etiketler kullanılarak bir belgenin farklı bölümleri açıkça tanımlanmıştır.</li>
+<li>Bu, belgenin okunabilirliğini ve anlamını büyük ölçüde artırır.</li>
+<li>Bu eğitimde, HTML anlamsal öğelerinin önemini ve bunların nasıl kullanılacağını öğrendik.</li>
+<li>Anlamsal HTML kullanımı, web sayfalarınızın daha iyi yapılandırılmasını ve erişilebilirliğini sağlar.</li>
+<li>Gelecekteki projelerinizde bu öğeleri kullanarak daha anlamlı ve düzenli kodlar yazabilirsiniz.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="html-1"><a class="header" href="#html-1">HTML <!DOCTYPE></a></h3>
+<h3 id="html-belge-tipi"><a class="header" href="#html-belge-tipi">HTML Belge Tipi</a></h3>
+<ul>
+<li>Tüm HTML belgeleri bir <code>&lt;!DOCTYPE&gt;</code> deklarasyonu ile başlamalıdır.</li>
+<li>Bu deklarasyon bir HTML etiketi değildir. Bu, tarayıcıya hangi belge tipinin bekleneceği hakkında bir "bilgi" sağlar.</li>
+<li>HTML5'te <code>&lt;!DOCTYPE&gt;</code> deklarasyonu basittir.</li>
+</ul>
+<h4 id="detaylı-açıklama"><a class="header" href="#detaylı-açıklama">Detaylı Açıklama</a></h4>
+<p><code>&lt;!DOCTYPE&gt;</code> deklarasyonu, tarayıcıların belgeyi nasıl işlemesi gerektiğini belirlemelerine yardımcı olur. HTML5'te kullanılan <code>&lt;!DOCTYPE&gt;</code> deklarasyonu, önceki HTML sürümlerine göre daha basit ve kısadır.</p>
+<p>Örneğin:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<p>Bu deklarasyon, tarayıcıya belgenin HTML5 standardına uygun olduğunu belirtir. HTML5'ten önceki sürümlerde kullanılan <code>&lt;!DOCTYPE&gt;</code> deklarasyonları daha karmaşıktı ve belge türünü daha ayrıntılı bir şekilde tanımlıyordu.</p>
+<h5 id="neden-doctype-deklarasyonu-kullanılır"><a class="header" href="#neden-doctype-deklarasyonu-kullanılır">Neden <code>&lt;!DOCTYPE&gt;</code> Deklarasyonu Kullanılır?</a></h5>
+<ul>
+<li>Uyumluluk: Tarayıcıların belgeyi standartlara uygun bir şekilde yorumlamasını sağlar.</li>
+<li>Geçerlilik: W3C tarafından belirlenen standartlara uygun bir HTML belgesi oluşturduğunuzdan emin olmanızı sağlar.</li>
+<li>İşleme Modu: Tarayıcılar, bir belgeyi ya "standart modda" ya da "uyumluluk modunda" (diğer adıyla "quirks mode") işler. <code>&lt;!DOCTYPE&gt;</code> deklarasyonu, tarayıcıların belgeyi "standart modda" işlemesini sağlar, bu da daha doğru ve tutarlı bir görüntüleme sağlar.</li>
+</ul>
+<h5 id="Örnekler"><a class="header" href="#Örnekler">Örnekler</a></h5>
+<p>HTML4.01 için kullanılan <code>&lt;!DOCTYPE&gt;</code> deklarasyonu:</p>
+<pre><code class="language-html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+</code></pre>
+<p>XHTML1.0 için kullanılan <code>&lt;!DOCTYPE&gt;</code> deklarasyonu:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+</code></pre>
+<p>Görüldüğü gibi, HTML5 ile gelen yeni <code>&lt;!DOCTYPE&gt;</code> deklarasyonu çok daha basit ve kullanımı kolaydır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<h4 id="sonuç-5"><a class="header" href="#sonuç-5">Sonuç</a></h4>
+<p><code>&lt;!DOCTYPE&gt;</code> deklarasyonu, HTML belgelerinin doğru ve tutarlı bir şekilde işlenmesini sağlamak için kritik bir öneme sahiptir. HTML5 ile birlikte bu deklarasyonun basitleştirilmiş olması, web geliştiricilerinin işini kolaylaştırmıştır. Tüm HTML belgelerinizde bu deklarasyonu kullanmak, belgelerinizin geçerli ve tarayıcılarla uyumlu olmasını sağlayacaktır.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-viewport-meta-etiketi"><a class="header" href="#html-viewport-meta-etiketi">HTML Viewport Meta Etiketi</a></h1>
+<h2 id="viewport-ayarlama"><a class="header" href="#viewport-ayarlama">Viewport Ayarlama</a></h2>
+<p>Responsive bir web sitesi oluşturmak için, tüm web sayfalarınıza aşağıdaki <code>&lt;meta&gt;</code> etiketini ekleyin:</p>
+<pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code></pre>
+<p>Bu, sayfanızın görünüm alanını ayarlayacak ve tarayıcıya sayfanın boyutlarını ve ölçeklendirmesini nasıl kontrol edeceği konusunda talimatlar verecektir.</p>
+<h2 id="Örnekler-1"><a class="header" href="#Örnekler-1">Örnekler</a></h2>
+<p>Viewport meta etiketi <strong>olmayan</strong> bir web sayfası ile viewport meta etiketi <strong>olan</strong> aynı web sayfasının örnekleri aşağıda verilmiştir:</p>
+<h3 id="viewport-meta-etiketi-olmadan"><a class="header" href="#viewport-meta-etiketi-olmadan">Viewport Meta Etiketi Olmadan</a></h3>
+<p>Viewport meta etiketi olmadan, web sayfası mobil cihazlarda düzgün bir şekilde ölçeklenmez ve masaüstü versiyonu gibi görünür. Bu, kullanıcı deneyimini olumsuz etkileyebilir, çünkü içerik mobil ekrana sığmaz ve kullanıcılar sürekli olarak yakınlaştırmak veya uzaklaştırmak zorunda kalır.</p>
+<h3 id="viewport-meta-etiketi-ile"><a class="header" href="#viewport-meta-etiketi-ile">Viewport Meta Etiketi ile</a></h3>
+<p>Viewport meta etiketi ile, web sayfası cihazın ekran boyutuna uygun olarak ölçeklenir. Bu, daha iyi bir kullanıcı deneyimi sağlar çünkü içerik, cihaz ekranına göre otomatik olarak uyarlanır ve kullanıcılar içeriği rahatça okuyabilir ve gezinebilir.</p>
+<h2 id="Örnek-kod-1"><a class="header" href="#Örnek-kod-1">Örnek Kod</a></h2>
+<p>Aşağıda, viewport meta etiketi eklenmiş basit bir HTML belgesi örneği bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Responsive Web Sayfası&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Duyarlı Görüntü&lt;/h2&gt;
+    &lt;img src="imglogo.jpg" style="width: 100%;"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu HTML belgesi, cihazın ekran boyutuna göre ölçeklenen ve kullanıcıya daha iyi bir deneyim sunan duyarlı bir görüntü içerir.</p>
+<h2 id="Çıktı-1"><a class="header" href="#Çıktı-1">Çıktı</a></h2>
+<p>Bu kodu tarayıcıda çalıştırdığınızda, aşağıdaki gibi bir çıktı elde edersiniz:</p>
+<p>Bu örnekte, viewport meta etiketi sayesinde görüntü, ekran boyutuna göre otomatik olarak ölçeklenir ve kullanıcının ekranına tam olarak uyum sağlar. Bu, mobil cihazlarda görüntülerin ve diğer içeriklerin doğru bir şekilde görüntülenmesini sağlar.</p>
+<h2 id="sonuç-6"><a class="header" href="#sonuç-6">Sonuç</a></h2>
+<p>Viewport meta etiketi, web sayfalarınızın mobil cihazlarda doğru şekilde görüntülenmesini sağlamak için kritik öneme sahiptir. Bu etiketi kullanarak, web sitenizin duyarlı olmasını ve tüm cihazlarda iyi bir kullanıcı deneyimi sunmasını sağlayabilirsiniz. Bu basit ama güçlü araç, modern web geliştirmede vazgeçilmez bir bileşendir.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html---bir-pdfyi-gömme"><a class="header" href="#html---bir-pdfyi-gömme">HTML - Bir PDF'yi Gömme</a></h1>
+<p>Bir PDF'yi bir HTML belgesine gömmek için üç yöntem vardır.</p>
+<ol>
+<li>Embed etiketi kullanarak.</li>
+</ol>
+<h3 id="1-embed-etiketi-kullanarak-bir-pdfyi-gömme"><a class="header" href="#1-embed-etiketi-kullanarak-bir-pdfyi-gömme">1. Embed Etiketi Kullanarak Bir PDF'yi Gömme</a></h3>
+<p>HTML belgesine bir PDF dosyası gömmek için en yaygın kullanılan yöntemlerden biri <code>embed</code> etiketini kullanmaktır. <code>embed</code> etiketi, bir dış kaynağı (genellikle medya dosyaları) bir web sayfasına yerleştirmek için kullanılır.</p>
+<p>Aşağıda, bir PDF dosyasını <code>embed</code> etiketi kullanarak HTML belgesine nasıl gömebileceğinizi gösteren bir örnek bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bir PDF'yi embed etiketi ile gömme&lt;/h1&gt;
+    &lt;embed src="dosya.pdf" width="600" height="400" type="application/pdf"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu örnekte, <code>src</code> özniteliği gömülecek PDF dosyasının yolunu belirtir. <code>width</code> ve <code>height</code> öznitelikleri, gömülü PDF'nin boyutlarını ayarlamak için kullanılır. <code>type</code> özniteliği ise dosyanın türünü belirtir; bu durumda <code>application/pdf</code> kullanılır.</p>
+<h3 id="2-iframe-etiketi-kullanarak-bir-pdfyi-gömme"><a class="header" href="#2-iframe-etiketi-kullanarak-bir-pdfyi-gömme">2. iframe Etiketi Kullanarak Bir PDF'yi Gömme</a></h3>
+<p>Bir başka yaygın yöntem de <code>iframe</code> etiketini kullanmaktır. <code>iframe</code> etiketi, bir web sayfası içinde başka bir web sayfasını gömmek için kullanılır, ancak PDF dosyalarını gömmek için de kullanılabilir.</p>
+<p>Aşağıda, bir PDF dosyasını <code>iframe</code> etiketi kullanarak HTML belgesine nasıl gömebileceğinizi gösteren bir örnek bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bir PDF'yi iframe etiketi ile gömme&lt;/h1&gt;
+    &lt;iframe src="dosya.pdf" width="600" height="400"&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu örnekte, <code>src</code> özniteliği yine gömülecek PDF dosyasının yolunu belirtir. <code>width</code> ve <code>height</code> öznitelikleri, iframe'in boyutlarını ayarlamak için kullanılır.</p>
+<h3 id="3-object-etiketi-kullanarak-bir-pdfyi-gömme"><a class="header" href="#3-object-etiketi-kullanarak-bir-pdfyi-gömme">3. object Etiketi Kullanarak Bir PDF'yi Gömme</a></h3>
+<p>PDF dosyalarını gömmek için kullanılabilecek bir başka HTML etiketi <code>object</code> etiketidir. <code>object</code> etiketi, bir HTML belgesine dış bir kaynağı (genellikle medya dosyaları) yerleştirmek için kullanılır.</p>
+<p>Aşağıda, bir PDF dosyasını <code>object</code> etiketi kullanarak HTML belgesine nasıl gömebileceğinizi gösteren bir örnek bulunmaktadır:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bir PDF'yi object etiketi ile gömme&lt;/h1&gt;
+    &lt;object data="dosya.pdf" type="application/pdf" width="600" height="400"&gt;
+        &lt;p&gt;PDF görüntüleyici yüklenemedi. PDF dosyasını &lt;a href="dosya.pdf"&gt;buradan indiriniz&lt;/a&gt;.&lt;/p&gt;
+    &lt;/object&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu örnekte, <code>data</code> özniteliği gömülecek PDF dosyasının yolunu belirtir. <code>type</code> özniteliği, dosyanın türünü belirtir. <code>width</code> ve <code>height</code> öznitelikleri ise object etiketinin boyutlarını ayarlamak için kullanılır.</p>
+<h3 id="sonuç-7"><a class="header" href="#sonuç-7">Sonuç</a></h3>
+<p>Bir PDF dosyasını bir HTML belgesine gömmek için üç ana yöntem bulunmaktadır: <code>embed</code>, <code>iframe</code> ve <code>object</code> etiketleri. Her bir yöntem farklı durumlar için uygun olabilir ve ihtiyaçlarınıza en uygun yöntemi seçerek kullanabilirsiniz. Bu yöntemlerle web sayfanızda kullanıcılarınıza PDF dosyalarını kolayca gösterebilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-dir-attribute"><a class="header" href="#html-dir-attribute">HTML dir Attribute</a></h1>
+<h2 id="tanım-ve-kullanım"><a class="header" href="#tanım-ve-kullanım">Tanım ve Kullanım</a></h2>
+<p><code>dir</code> attribute, bir elementin içeriğinin metin yönünü belirtir.</p>
+<h2 id="1-genel-bakış"><a class="header" href="#1-genel-bakış">1. Genel Bakış</a></h2>
+<p><code>dir</code> attribute, HTML elementlerinin metin yönünü belirlemek için kullanılır. İki ana değeri vardır:</p>
+<ul>
+<li>ltr: Soldan sağa metin yönü.</li>
+<li>rtl: Sağdan sola metin yönü.</li>
+</ul>
+<p>Metin yönü, özellikle çift yönlü (bidi) metin düzenleme için önemli olan dillerde kullanışlıdır. Örneğin, İngilizce soldan sağa yazılırken, Arapça ve İbranice sağdan sola yazılır.</p>
+<h2 id="2-kullanım-Örneği"><a class="header" href="#2-kullanım-Örneği">2. Kullanım Örneği</a></h2>
+<p>Aşağıda <code>dir</code> attribute'nün kullanımı gösterilmiştir:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;p dir="rtl"&gt;Biz geliştiricilerin JavaScript ve React'i derinlemesine anlamalarına yardımcı oluyoruz.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu örnekte, <code>&lt;p&gt;</code> elementi içinde yer alan metin sağdan sola doğru yazılacaktır.</p>
+<h2 id="3-dir-attribute-ve-css"><a class="header" href="#3-dir-attribute-ve-css">3. <code>dir</code> Attribute ve CSS</a></h2>
+<p><code>dir</code> attribute aynı zamanda CSS ile birlikte kullanılabilir. CSS ile bir elementin metin yönünü değiştirmek için <code>direction</code> özelliği kullanılır.</p>
+<p>Örneğin:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.rtl {
+  direction: rtl;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p class="rtl"&gt;Biz geliştiricilerin JavaScript ve React'i derinlemesine anlamalarına yardımcı oluyoruz.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="4-doğru-kullanım-ve-yanlış-anlamalar"><a class="header" href="#4-doğru-kullanım-ve-yanlış-anlamalar">4. Doğru Kullanım ve Yanlış Anlamalar</a></h2>
+<ul>
+<li><code>dir</code> attribute sadece metin yönünü belirtir. Bu, bir web sayfasının genel düzenini veya diğer stil özelliklerini etkilemez.</li>
+<li>Metin yönü değişikliği, yalnızca metin içeriği üzerinde etkili olur. Görseller veya diğer medya elemanları üzerinde bir etkisi yoktur.</li>
+</ul>
+<h2 id="5-pratik-Öneriler"><a class="header" href="#5-pratik-Öneriler">5. Pratik Öneriler</a></h2>
+<ul>
+<li>Dil ve yazı yönü farklı olan içeriklerin yönetilmesi sırasında <code>dir</code> attribute'nü kullanmak oldukça faydalıdır.</li>
+<li>Web sayfalarının erişilebilirliğini artırmak için doğru metin yönü kullanımı önemlidir. Özellikle çok dilli web sitelerinde, kullanıcı deneyimini iyileştirmek için her dilin doğru yazı yönünde görüntülenmesi sağlanmalıdır.</li>
+</ul>
+<h2 id="sonuç-8"><a class="header" href="#sonuç-8">Sonuç</a></h2>
+<p>HTML <code>dir</code> attribute, metin yönünü belirtmek için önemli bir araçtır. Özellikle çok dilli web sitelerinde doğru kullanımı, kullanıcı deneyimini ve erişilebilirliği artırır. Yukarıdaki örnekler ve açıklamalar, bu attribute'nün kullanımını anlamanızı ve uygulamanızı sağlayacaktır.</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="html-doğrulayıcı"><a class="header" href="#html-doğrulayıcı">HTML Doğrulayıcı</a></h1>
+<h2 id="giriş"><a class="header" href="#giriş">Giriş</a></h2>
+<p>W3C (World Wide Web Consortium) doğrulaması, bir web sitesinin kodunun biçimlendirme standartlarına uyup uymadığını kontrol etme sürecidir. HTML doğrulayıcıları, web geliştiricilerinin HTML belgelerinin doğru yapılandırıldığını ve W3C standartlarına uygun olduğunu kontrol etmelerine yardımcı olur. Bu, web sayfalarının tarayıcılarda doğru görüntülenmesini ve erişilebilirlik açısından en iyi uygulamaları takip etmesini sağlar.</p>
+<h2 id="html-doğrulayıcı-kullanımı"><a class="header" href="#html-doğrulayıcı-kullanımı">HTML Doğrulayıcı Kullanımı</a></h2>
+<p>Aşağıda, bir HTML doğrulayıcının nasıl kullanılacağını gösteren bir örnek bulunmaktadır. Bu örnek, basit bir HTML belgesinin doğrulama sürecini kapsamaktadır.</p>
+<h3 id="adım-1-html-kodunu-giriş-alanına-yapıştırma"><a class="header" href="#adım-1-html-kodunu-giriş-alanına-yapıştırma">Adım 1: HTML Kodunu Giriş Alanına Yapıştırma</a></h3>
+<p>HTML doğrulayıcısını kullanmak için, öncelikle doğrulanacak HTML kodunu doğrulayıcı aracının giriş alanına yapıştırmanız gerekmektedir. Örneğin:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML Validator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;HTML Validator&lt;/h1&gt;
+    &lt;p&gt;W3C validation is the process of checking a website's code to determine if it follows the formatting standards.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Yukarıdaki kod parçası, basit bir HTML belgesi örneğidir.</p>
+<h3 id="adım-2-doğrulama-İşlemini-başlatma"><a class="header" href="#adım-2-doğrulama-İşlemini-başlatma">Adım 2: Doğrulama İşlemini Başlatma</a></h3>
+<p>HTML kodunu giriş alanına yapıştırdıktan sonra, "Check" (Kontrol Et) düğmesine tıklayarak doğrulama işlemini başlatabilirsiniz. Doğrulayıcı, kodunuzu analiz edecek ve olası hataları veya uyarıları raporlayacaktır.</p>
+<h3 id="adım-3-Çıktıyı-İnceleme"><a class="header" href="#adım-3-Çıktıyı-İnceleme">Adım 3: Çıktıyı İnceleme</a></h3>
+<p>Doğrulayıcı, HTML kodunu kontrol ettikten sonra, sonuçları gösterecektir. Eğer kodunuzda hata veya uyarı yoksa, doğrulayıcı "No errors or warnings to show" (Gösterilecek hata veya uyarı yok) mesajını verecektir. Örneğin:</p>
+<pre><code class="language-plaintext">Document checking completed. No errors or warnings to show.
+</code></pre>
+<p>Bu, HTML kodunuzun W3C standartlarına uygun olduğunu ve herhangi bir sorun bulunmadığını gösterir.</p>
+<h3 id="doğrulama-raporunun-anlamı"><a class="header" href="#doğrulama-raporunun-anlamı">Doğrulama Raporunun Anlamı</a></h3>
+<p>Doğrulama raporu, HTML kodunun doğru yapılandırıldığını ve W3C standartlarına uygun olduğunu belirten bir geri bildirim sağlar. Bu, web sayfanızın tüm tarayıcılarda tutarlı bir şekilde görüntüleneceğini ve erişilebilirlik açısından en iyi uygulamalara uyacağını garanti eder.</p>
+<h2 id="neden-w3c-doğrulaması-kullanılmalı"><a class="header" href="#neden-w3c-doğrulaması-kullanılmalı">Neden W3C Doğrulaması Kullanılmalı?</a></h2>
+<p>W3C doğrulaması, web geliştiricilerinin ve tasarımcılarının web sayfalarının kalitesini ve uyumluluğunu sağlamalarına yardımcı olur. İşte W3C doğrulamasının bazı önemli nedenleri:</p>
+<ul>
+<li><strong>Uyumluluk</strong>: Web sayfalarının farklı tarayıcılarda ve cihazlarda tutarlı bir şekilde görüntülenmesini sağlar.</li>
+<li><strong>Erişilebilirlik</strong>: Web sayfalarının erişilebilirlik standartlarına uygun olmasını sağlar, böylece daha geniş bir kullanıcı kitlesine ulaşabilir.</li>
+<li><strong>Bakım Kolaylığı</strong>: Doğru ve standartlara uygun kod, bakım ve güncellemeleri kolaylaştırır.</li>
+<li><strong>SEO</strong>: Temiz ve standartlara uygun kod, arama motoru optimizasyonunu (SEO) iyileştirir.</li>
+</ul>
+<h2 id="sonuç-9"><a class="header" href="#sonuç-9">Sonuç</a></h2>
+<p>HTML doğrulayıcıları, web geliştiricilerinin ve tasarımcılarının kodlarını W3C standartlarına uygun olup olmadığını kontrol etmelerine yardımcı olan önemli araçlardır. Bu doğrulayıcılar, web sayfalarının doğru çalışmasını, erişilebilirliğini ve uyumluluğunu sağlamak için kritik bir rol oynar. Web geliştirme sürecinizde HTML doğrulayıcıları kullanarak, web sitelerinizin kalitesini ve performansını artırabilirsiniz.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="assignment-3"><a class="header" href="#assignment-3">Assignment</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

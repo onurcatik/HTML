@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Ürün Listesi</h2>
+
+<table>
+    <tr>
+        <th>Ürün No</th>
+        <th>Ürün Adı</th>
+        <th>Fiyat</th>
+        <th>Stok Durumu</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Dizüstü Bilgisayar</td>
+        <td>5000 TL</td>
+        <td>Stokta Var</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Akıllı Telefon</td>
+        <td>3000 TL</td>
+        <td>Stokta Yok</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Tablet</td>
+        <td>1500 TL</td>
+        <td>Stokta Var</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+<!-- 2 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #d9edf7;
+        }
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                display: none;
+            }
+            tr {
+                margin-bottom: 10px;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 0;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            td:nth-of-type(1):before { content: "Öğrenci No"; }
+            td:nth-of-type(2):before { content: "Adı"; }
+            td:nth-of-type(3):before { content: "Soyadı"; }
+            td:nth-of-type(4):before { content: "Not Ortalaması"; }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Gelişmiş Öğrenci Bilgileri Tablosu</h2>
+
+<table>
+    <tr>
+        <th>Öğrenci No</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Not Ortalaması</th>
+    </tr>
+    <tr class="highlight">
+        <td>1</td>
+        <td>Ali</td>
+        <td>Yılmaz</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <td rowspan="2">2</td>
+        <td>Ayşe</td>
+        <td>Kaya</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td colspan="2">Birleştirilmiş Hücre</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Mehmet</td>
+        <td>Demir</td>
+        <td>78</td>
+    </tr>
+</table>
+
+</body>
+</html>
+

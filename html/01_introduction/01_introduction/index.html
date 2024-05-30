@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="tr" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - HTML</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../html/index.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/01_introduction/01_introduction/index.html" class="active"><strong aria-hidden="true">1.1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/01_introduction/02_structure_of_html/index.html"><strong aria-hidden="true">1.1.1.</strong> Structure of HTML</a></li><li class="chapter-item expanded "><a href="../../../html/01_introduction/03_html_headings/index.html"><strong aria-hidden="true">1.1.2.</strong> HTML Headings</a></li><li class="chapter-item expanded "><a href="../../../html/01_introduction/04_html_paragraphs/index.html"><strong aria-hidden="true">1.1.3.</strong> HTML Paragraphs</a></li><li class="chapter-item expanded "><a href="../../../html/01_introduction/05_assignment/index.html"><strong aria-hidden="true">1.1.4.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../../../html/02_html_styling/index.html"><strong aria-hidden="true">1.2.</strong> HTML Styling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/02_html_styling/01_styles/index.html"><strong aria-hidden="true">1.2.1.</strong> Styles</a></li><li class="chapter-item expanded "><a href="../../../html/02_html_styling/02_text-formating/index.html"><strong aria-hidden="true">1.2.2.</strong> Text Formating</a></li><li class="chapter-item expanded "><a href="../../../html/02_html_styling/03_indentation/index.html"><strong aria-hidden="true">1.2.3.</strong> Indentation</a></li><li class="chapter-item expanded "><a href="../../../html/02_html_styling/04_quatation/index.html"><strong aria-hidden="true">1.2.4.</strong> Quatation</a></li><li class="chapter-item expanded "><a href="../../../html/02_html_styling/05_assignment/index.html"><strong aria-hidden="true">1.2.5.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/index.html"><strong aria-hidden="true">1.3.</strong> HTML Multimedia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/01_comments/index.html"><strong aria-hidden="true">1.3.1.</strong> Comments</a></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/02_colors/index.html"><strong aria-hidden="true">1.3.2.</strong> Colors</a></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/03_links/index.html"><strong aria-hidden="true">1.3.3.</strong> Links</a></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/04_images/index.html"><strong aria-hidden="true">1.3.4.</strong> Images</a></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/05_videos/index.html"><strong aria-hidden="true">1.3.5.</strong> Videos</a></li><li class="chapter-item expanded "><a href="../../../html/03_html_multimedia/06_assignment/index.html"><strong aria-hidden="true">1.3.6.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/index.html"><strong aria-hidden="true">1.4.</strong> List and Tables</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/01_favicon/index.html"><strong aria-hidden="true">1.4.1.</strong> Favicon</a></li><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/02_tables/index.html"><strong aria-hidden="true">1.4.2.</strong> Tables</a></li><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/03_lists/index.html"><strong aria-hidden="true">1.4.3.</strong> Lists</a></li><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/04_block_inline_elements/index.html"><strong aria-hidden="true">1.4.4.</strong> Block Inline Elements</a></li><li class="chapter-item expanded "><a href="../../../html/04_lists_and_tables/05_assignment/index.html"><strong aria-hidden="true">1.4.5.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/index.html"><strong aria-hidden="true">1.5.</strong> Form</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/05_html_form/01_Iframes/index.html"><strong aria-hidden="true">1.5.1.</strong> Iframes</a></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/02_multimedia/index.html"><strong aria-hidden="true">1.5.2.</strong> Multimedia</a></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/03_forms/index.html"><strong aria-hidden="true">1.5.3.</strong> Forms</a></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/04_canvas/index.html"><strong aria-hidden="true">1.5.4.</strong> Canvas</a></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/05_emojis/index.html"><strong aria-hidden="true">1.5.5.</strong> Emojis</a></li><li class="chapter-item expanded "><a href="../../../html/05_html_form/06_assignment/index.html"><strong aria-hidden="true">1.5.6.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/index.html"><strong aria-hidden="true">1.6.</strong> Semantic Elements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/01_semantic/index.html"><strong aria-hidden="true">1.6.1.</strong> Semantic</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/02_doctype/index.html"><strong aria-hidden="true">1.6.2.</strong> Doctype</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/03_viewport/index.html"><strong aria-hidden="true">1.6.3.</strong> Viewport</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/04_embed_pdf/index.html"><strong aria-hidden="true">1.6.4.</strong> Embed PDF</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/05_dir_attribute/index.html"><strong aria-hidden="true">1.6.5.</strong> dir attribute</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/06_validator/index.html"><strong aria-hidden="true">1.6.6.</strong> Validator</a></li><li class="chapter-item expanded "><a href="../../../html/06_html_semantic_elements/07_assignment/index.html"><strong aria-hidden="true">1.6.7.</strong> Assignment</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">HTML</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="htmlye-giriş"><a class="header" href="#htmlye-giriş">HTML'ye Giriş</a></h2>
+<h3 id="html-nedir"><a class="header" href="#html-nedir">HTML Nedir?</a></h3>
+<ul>
+<li>HTML, İngilizce "Hyper Text Markup Language" ifadesinin kısaltmasıdır.</li>
+<li>HTML, bir web sayfasının yapısını tanımlar.</li>
+<li>HTML öğeleri, tarayıcıya içeriği nasıl görüntüleyeceğini söyler.</li>
+</ul>
+<h3 id="html-Öğesi-nedir"><a class="header" href="#html-Öğesi-nedir">HTML Öğesi Nedir?</a></h3>
+<ul>
+<li>Bir HTML öğesi, bir başlangıç etiketi, içerik ve bir bitiş etiketi ile tanımlanır:</li>
+<li>Öğeler, başlık etiketleri, resim etiketleri, paragraf etiketleri, bağlantı etiketleri vb. olabilir.</li>
+</ul>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;h1&gt;Bu bir başlıktır&lt;/h1&gt;
+&lt;p&gt;Bu bir paragraftır&lt;/p&gt;
+&lt;a href="https://www.example.com"&gt;Bu bir bağlantıdır&lt;/a&gt;
+</code></pre>
+<h3 id="html-Öznitelikleri"><a class="header" href="#html-Öznitelikleri">HTML Öznitelikleri</a></h3>
+<ul>
+<li>Tüm HTML öğeleri <strong>özniteliklere</strong> sahip olabilir.</li>
+<li>Öznitelikler, öğeler hakkında <strong>ek bilgi</strong> sağlar.</li>
+<li>Öznitelikler her zaman <strong>başlangıç etiketinde</strong> belirtilir.</li>
+<li>Öznitelikler genellikle ad/değer çiftleri şeklindedir: <strong>ad="değer"</strong></li>
+</ul>
+<p>Örnek:</p>
+<pre><code class="language-html">&lt;a href="https://www.example.com" title="Example"&gt;Bu bir bağlantıdır&lt;/a&gt;
+&lt;img src="image.jpg" alt="Örnek Resim"&gt;
+</code></pre>
+<h3 id="açıklamalı-kod-Örnekleri"><a class="header" href="#açıklamalı-kod-Örnekleri">Açıklamalı Kod Örnekleri</a></h3>
+<p><strong>1. Basit HTML Yapısı</strong></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Örnek HTML Sayfası&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hoş Geldiniz!&lt;/h1&gt;
+    &lt;p&gt;Bu bir örnek HTML sayfasıdır.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Bu kod, basit bir HTML sayfasının temel yapısını göstermektedir. Doctype, HTML5 kullanıldığını belirtir. <code>head</code> bölümü sayfanın başlık bilgisini içerir. <code>body</code> bölümü ise sayfanın asıl içeriğini barındırır.</p>
+<p><strong>2. Özniteliklerin Kullanımı</strong></p>
+<pre><code class="language-html">&lt;img src="image.jpg" alt="Açıklama Metni" width="500" height="600"&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Example Sitesine Git&lt;/a&gt;
+</code></pre>
+<p>Bu örneklerde, <code>img</code> etiketi bir resim ekler ve <code>alt</code>, <code>width</code>, <code>height</code> öznitelikleri ile resim hakkında ek bilgiler sağlar. <code>a</code> etiketi ise bir bağlantı oluşturur ve <code>href</code> özniteliği ile bağlantının adresini, <code>target</code> özniteliği ile bağlantının yeni bir sekmede açılmasını belirtir.</p>
+<h3 id="bilimsel-ve-teknik-açıklamalar"><a class="header" href="#bilimsel-ve-teknik-açıklamalar">Bilimsel ve Teknik Açıklamalar</a></h3>
+<p>HTML (Hyper Text Markup Language), web sayfalarının temel yapı taşıdır. Her HTML belgesi, bir dizi öğeden oluşur. Bu öğeler, tarayıcıya içerik parçalarını nasıl düzenlemesi gerektiğini bildirir. Örneğin, <code>&lt;h1&gt;</code> ile <code>&lt;h6&gt;</code> etiketleri başlıkları belirtir ve içerik hiyerarşisini oluşturur. <code>&lt;p&gt;</code> etiketi paragrafları tanımlar ve metni düzenler.</p>
+<p>Öznitelikler, öğelerin işlevselliğini ve görünümünü daha spesifik hale getirir. Örneğin, <code>href</code> özniteliği bir bağlantının hedef URL'sini belirtir, <code>src</code> özniteliği ise bir resim dosyasının yolunu gösterir. Bu tür öznitelikler, HTML belgesinin etkileşimli ve kullanıcı dostu olmasını sağlar.</p>
+<h3 id="kritik-İnceleme"><a class="header" href="#kritik-İnceleme">Kritik İnceleme</a></h3>
+<p>HTML'nin doğru kullanımı, web sayfalarının erişilebilir ve etkili olmasını sağlar. Yanlış yapılandırılmış HTML, kullanıcı deneyimini olumsuz etkileyebilir ve arama motoru optimizasyonunu (SEO) düşürebilir. Ayrıca, HTML standartlarına uygun olmayan kodlar, tarayıcılar arasında uyumsuzluklara yol açabilir.</p>
+<p>Bu nedenle, HTML yazarken dikkat edilmesi gereken en önemli noktalar:</p>
+<ul>
+<li>Etiketlerin doğru şekilde kapatılması,</li>
+<li>Uygun özniteliklerin kullanılması,</li>
+<li>HTML5 standartlarına uyulmasıdır.</li>
+</ul>
+<p>HTML, web geliştirme sürecinin temelini oluşturur ve diğer teknolojiler (CSS, JavaScript) ile birlikte kullanıldığında güçlü ve dinamik web sayfaları oluşturmayı mümkün kılar.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../html/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../html/01_introduction/02_structure_of_html/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../html/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../html/01_introduction/02_structure_of_html/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js"></script>
+        <script src="../../../mark.min.js"></script>
+        <script src="../../../searcher.js"></script>
+
+        <script src="../../../clipboard.min.js"></script>
+        <script src="../../../highlight.js"></script>
+        <script src="../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

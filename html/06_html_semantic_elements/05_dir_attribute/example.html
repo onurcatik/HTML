@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Karmaşık Düzen Örneği</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .rtl {
+            direction: rtl;
+        }
+        .ltr {
+            direction: ltr;
+        }
+        .content {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container rtl">
+    <div class="column">
+        <h2>Column 1 (RTL)</h2>
+        <div class="content">
+            <p dir="rtl">هذا النص مكتوب باللغة العربية ويجب عرضه من اليمين إلى اليسار.</p>
+        </div>
+    </div>
+    <div class="column">
+        <h2>Column 2 (LTR)</h2>
+        <div class="content">
+            <p dir="ltr">This text is in English and should be displayed from left to right.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container ltr">
+    <div class="column">
+        <h2>Column 1 (LTR)</h2>
+        <div class="content">
+            <p dir="ltr">This is another example of English text displayed from left to right.</p>
+        </div>
+    </div>
+    <div class="column">
+        <h2>Column 2 (RTL)</h2>
+        <div class="content">
+            <p dir="rtl">هذا مثال آخر على نص باللغة العربية ويجب عرضه من اليمين إلى اليسار.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
